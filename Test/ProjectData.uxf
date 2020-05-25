@@ -13,6 +13,7 @@
 
 halign=left
 --
+#GameManager 싱글톤 객체
 + Instance : static GameManager
 </panel_attributes>
     <additional_attributes/>
@@ -28,12 +29,14 @@ halign=left
     <panel_attributes>LoaderMg
 halign=left
 --
+#로딩과정 등록용 델리게이트 변수
 -myLoader : AccountLoad
 --
 #모든 게임 데이터 로드
 +GameDataLoad() : void
 #내부 delegate 클래스
 -AccountLoad() : delegate void 
+#델리게이트 등록용 함수들
 -JsonDifficultyWeightLoad() : void
 
 #추가적 구현 사항
@@ -59,40 +62,48 @@ delegate 변수에 Load함수들 등록 할 것.
     <id>UMLGeneric</id>
     <coordinates>
       <x>1392</x>
-      <y>688</y>
-      <w>104</w>
-      <h>80</h>
+      <y>680</y>
+      <w>248</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>PlayerInfoMG
 halign=left
 --
-추후 내정
-지금 개발 X</panel_attributes>
+#구현할 것
+#진행중인 월드가 있는가?
+#있다면 그 상태값을 표현
+#완료된 챕터들 값 표시
+#기본적인 정보
+#월드에서 남은 목숨 정보</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1280</x>
-      <y>720</y>
+      <y>712</y>
       <w>128</w>
-      <h>72</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;70.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1392</x>
-      <y>552</y>
-      <w>208</w>
-      <h>80</h>
+      <x>1368</x>
+      <y>544</y>
+      <w>232</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>ChapterManager
 halign=left
 --
+#현재 진행중인 챕터 정보
+#스테이지 진행시 씬 데이터 변경하기 위함
 +NowChapter : ChapterInfo
+#모든 챕터들의 정보값
+#이것은 제이슨에서 받아서 넣어줘야한다.
 +ChapterList : List&lt;ChapterInfo&gt;
 </panel_attributes>
     <additional_attributes/>
@@ -108,7 +119,11 @@ halign=left
     <panel_attributes>WorldManger
 halign=left
 --
+#모든 월드들의 정보값
+#이것은 제이슨에서 받아서 넣어줘야한다.
 + WorldList : List&lt;WorldInfo&gt;
+#현재 진행중인 월드의 ID 값 
+#진행중이면 해당 값 아니면 99999값
 + SelectedWorldID : int
 
 -- 
@@ -127,7 +142,9 @@ halign=left
     </coordinates>
     <panel_attributes>StageManager
 halign=left
---
+-
+#모든 스테이지들의 정보값
+#이것은 제이슨에서 받아서 넣어줘야한다.
 +StageList : List&lt;StageInfo&gt;</panel_attributes>
     <additional_attributes/>
   </element>
@@ -154,8 +171,8 @@ halign=left
 halign=left
 ICObject
 --
-Bool IsAlive 
-Bool IsInterActive 
+#몬스터나 캐릭터등인가 아니면 장애물같은거인가?
++Bool IsAlive 
 --</panel_attributes>
     <additional_attributes/>
   </element>
@@ -170,12 +187,19 @@ Bool IsInterActive
     <panel_attributes>Character
 halign=left
 --
+#캐릭터 명(Prefabs이름 )
 #Name : String
+#충돌 반경
 #radius : float
+#오브젝트 hp  0 이하일시 Destory
 #hp : float
+#컨트롤 가능한가
 -IsCanControl : bool
+#넉백이 되는가?
 -IsCanKnockback : bool
+#공격력
 #att : float
+#이동속도
 #spd : float
 
 #플레이어경우 무기 att속성
@@ -206,8 +230,11 @@ halign=left
     <panel_attributes>PlayerCharacter
 halign=left
 --
+#스킬 게이지
 - SuperGauge : float
+#착용중인 무기 id
 - equipWeaponId : int
+#착용중인 무기 정보값
 - equipWeapon : Weapons 
 --
 #SetWeapon에서 동작 방식,조작법 변경
@@ -229,18 +256,31 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>992</x>
-      <y>1344</y>
-      <w>152</w>
-      <h>104</h>
+      <x>944</x>
+      <y>1408</y>
+      <w>288</w>
+      <h>288</h>
     </coordinates>
     <panel_attributes>Monster
 
 halign=left
 --
+#오브젝트 ID값(정보를 위함)
 #Id : int
+#몬스터 등급
 #rank : int
-#actionList : List&lt;NpcAion&gt;
+#작동리스트(행동 리스트)
+#actionList : List&lt;MonsterAction&gt;
+#시야각
++Sight : float
+#스테이지 클리어를 위한 경험치 드랍양
++dropExp : float
+#약점 방향 	각도가 90인 호
+○	n-북, w-서, e-동, s-남
+●	일부 능력이 약점 타격시 추가 이득이 있을 수 있다.
+○	자세한건 능력별로 설정
+
++weakPoint : char
 --
 </panel_attributes>
     <additional_attributes/>
@@ -250,11 +290,11 @@ halign=left
     <coordinates>
       <x>1008</x>
       <y>1288</y>
-      <w>72</w>
-      <h>72</h>
+      <w>24</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>70.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
@@ -268,6 +308,7 @@ halign=left
 Obstacle
 halign=left
 --
+#캐릭터와 상호작용시 해야할 함수
 abstract Act(Character T) : void
 
 #이 클래스 상속구조를 변경할지 안할지는
@@ -297,6 +338,7 @@ abstract Act(Character T) : void
     <panel_attributes>Item
 halign=left
 --
+#실제 구현
 +Act(Character T) : void</panel_attributes>
     <additional_attributes/>
   </element>
@@ -311,6 +353,7 @@ halign=left
     <panel_attributes>Projectile
 halign=left
 --
+#실제 구현
 +Act(Character T) : void</panel_attributes>
     <additional_attributes/>
   </element>
@@ -347,6 +390,7 @@ halign=left
     <panel_attributes>Obj (환경물)
 halign=left
 --
+#실제 구현
 +Act(Character T) : void</panel_attributes>
     <additional_attributes/>
   </element>
@@ -435,59 +479,67 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1200</x>
+      <x>1176</x>
       <y>528</y>
-      <w>72</w>
+      <w>96</w>
       <h>240</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;280.0;70.0;10.0</additional_attributes>
+    <additional_attributes>10.0;280.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1272</x>
-      <y>624</y>
-      <w>136</w>
-      <h>144</h>
+      <y>656</y>
+      <w>112</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;160.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;120.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>656</x>
-      <y>760</y>
+      <x>680</x>
+      <y>712</y>
       <w>256</w>
       <h>144</h>
     </coordinates>
     <panel_attributes>StageInfo
 halign=left
 --
+#스테이지 테이블 ID값 
 + StageId : int 
 #StageName은 맵의 프리팹 연결과 관련있다.
+#StageName을 통해 맵 프리팹을 폴더에서 찾는다
 + StageName : String
+#해당 스테이지 클리어를 위한 경험치 값
 + expAmount : int
+#해당 스테이지 난이도 값
 + currDifficulty : int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>672</x>
-      <y>536</y>
+      <x>544</x>
+      <y>400</y>
       <w>264</w>
-      <h>168</h>
+      <h>216</h>
     </coordinates>
     <panel_attributes>WorldInfo
 halign=left
 --
+#월드테이블 ID 값 
 + WorldId : int 
+#월드종류 이름 값 
 + WorldName : String
 #인게임에서 사용 (진행중인 월드가 없으면 리셋)
 # 진행중이라면 저장해야하는 데이터
+#해당 월드의 챕터 구성 리스트(화염 챕터1 화염챕터 3등등)
 + World_ChapterList : List&lt;ChapterInfo&gt;
+#해당 월드를 구성할 수 있는 챕터 리스트
 + World_RandomChapterList : List&lt;PercentInfo&gt;
 
 #마지막 챕터의 id 
@@ -501,26 +553,35 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>952</x>
-      <y>520</y>
-      <w>256</w>
-      <h>200</h>
+      <x>880</x>
+      <y>336</y>
+      <w>288</w>
+      <h>344</h>
     </coordinates>
     <panel_attributes>ChapterInfo
 halign=left
 --
+#챕터 테이블 ID값
 + ChapterId : int
+#챕터 종류 이름 값
 + ChapterName : String
 #인게임에서 사용 (진행중인 월드가 없으면 리셋)
 # 진행중이라면 저장해야하는 데이터
+#해당 챕터의 스테이지 구성 리스트(약 10개 예상)
 + Chapter_StageList : List&lt;StageInfo&gt;
-
+#해당 챕터를 구성할 수 있는 스테이지 리스트 
+# 이 값을 이용해서 구성리스트 랜덤으로 작성
 + Chapter_MapList : List&lt;PercentInfo&gt;
-#ID 또는 
-+ Chapter_MonsterList : List&lt;int&gt;
-+ Chapter_ObjectList : List&lt;int&gt;
+#챕터에서 소환될 몬스터 구성 리스트
++ Chapter_MonsterList : List&lt;PercentInfo&gt;
+#챕터에서 소환될 오브젝트 구성 리스트
++ Chapter_ObjectList : List&lt;PercentInfo&gt;
+#최대 오브젝트 갯수
 + maxObjAmount : int
+#각 스테이지 난이도 조절용 int 리스트 
+#챕터스테이지 리스트와 길이가 같다.
 + difficultyMode : List&lt;int&gt;
+#완료되었는가? 표시용
 + IsClear : bool</panel_attributes>
     <additional_attributes/>
   </element>
@@ -544,30 +605,19 @@ Now는 리스트의 정보를 받아온다.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>800</x>
-      <y>320</y>
+      <x>1136</x>
+      <y>136</y>
       <w>256</w>
       <h>144</h>
     </coordinates>
     <panel_attributes>PercentInfo
 halign=left
 --
+#확률대상 ID값 저장용
 + ID : int
+#확률
 + Percent : int
 </panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>464</x>
-      <y>672</y>
-      <w>160</w>
-      <h>104</h>
-    </coordinates>
-    <panel_attributes>IngameStageMG
-halign=left
---</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -644,6 +694,8 @@ halign=left
 --
 - ControlWay : Controls
 + WeaponsAnim : AnimationController
+--
+#함수는 당장은 미구현
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -671,7 +723,7 @@ halign=left
 --
 
 --
-+Act(PlayerCharacter) : void</panel_attributes>
++ abstact Act(PlayerCharacter) : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -711,5 +763,64 @@ halign=left
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
     <additional_attributes>10.0;70.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1200</x>
+      <y>1704</y>
+      <w>144</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;abstract&gt;
+MonsterAction
+halign=left
+--
++Act() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1128</x>
+      <y>1800</y>
+      <w>88</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>10.0;130.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1056</x>
+      <y>1904</y>
+      <w>144</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>이것들은 추상화 클래스로\
+halign=left
+--
++Act() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1632</x>
+      <y>536</y>
+      <w>296</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>InGameManager
+halign=left
+--
+#챕터별로 관리가 되는거 같다.
+#챕터가 끝나면, 다시 로비로 전환?
+#스테이지 미종료인데 종료시 목숨 - 1
+#챕터 종료시 보상조치
+#월드 종료시 보상조치
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
