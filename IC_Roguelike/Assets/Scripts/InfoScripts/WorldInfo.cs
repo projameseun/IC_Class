@@ -18,6 +18,7 @@ public class WorldInfo : MonoBehaviour
 
     public int Worldid;
     public string WorldName;
+    public string Wolrd_RandomChapter;
     //인게임에서 사용(진행중인 월드가 없으면 리셋)
     //진행중이라면 저장해야하는 데이터
 

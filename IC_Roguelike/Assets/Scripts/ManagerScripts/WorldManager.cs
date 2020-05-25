@@ -5,6 +5,11 @@ using UnityEngine;
 public class WorldManager : MonoBehaviour
 {
   
-    public List<WorldInfo> WorldList = new List<WorldInfo>();
+    public List<WorldInfo> WorldList;
     public int SelectedWorldID;
+
+    public void SetWorldList(List<WorldInfo> LoadWorldList)
+    {
+        WorldList = LoadWorldList;
+    }
 }
