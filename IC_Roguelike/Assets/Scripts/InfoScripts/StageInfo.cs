@@ -9,5 +9,12 @@ public class StageInfo : MonoBehaviour
     public int expAmount;
     public int currDiffculty;
     public string StageName;
-    
+
+    public StageInfo(int stageid, int expAmount, int currDiffculty, string stageName)
+    {
+        Stageid = stageid;
+        this.expAmount = expAmount;
+        this.currDiffculty = currDiffculty;
+        StageName = stageName;
+    }
 }
