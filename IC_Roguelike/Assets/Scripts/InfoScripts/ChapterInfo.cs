@@ -7,14 +7,14 @@ public class ChapterInfo : MonoBehaviour
    
     public int Chapterid;    //챕터 테이블 ID값
     public string ChapterName;  //챕터 종류 이름값
-    public string Chpater_Map;
+ 
 
     public ChapterInfo() { }
     public ChapterInfo(int chapterid, string chapterName, string chpater_Map)
     {
         Chapterid = chapterid;
         ChapterName = chapterName;
-        Chpater_Map = chpater_Map;
+        
     }
 
     //인게임에서 사용(진행중인 월드가 없으면 리셋)

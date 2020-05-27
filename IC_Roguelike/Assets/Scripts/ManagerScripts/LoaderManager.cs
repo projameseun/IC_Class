@@ -52,15 +52,20 @@ public class LoaderManager : MonoBehaviour
         for (int i = 0; i < a_WorldList.Count; i++)
         {
             string[] datas = a_WorldList[i].Wolrd_RandomChapter.Split(',');
+
+            a_WorldList[i].World_RandomChapterList = new List<PercentInfo>();
+
             for (int j = 0; j < datas.Length; j++)
             {
                 string[] Splits = datas[j].Split(':');
-                a_WorldList[i].World_RandomChapterList[j].ID = int.Parse(Splits[0]);
-                a_WorldList[i].World_RandomChapterList[j].Percent = int.Parse(Splits[1]);
+                PercentInfo InsertData = new PercentInfo();
+                InsertData.ID = int.Parse(Splits[0]);
+                InsertData.Percent = int.Parse(Splits[1]);
+                a_WorldList[i].World_RandomChapterList.Add(InsertData);
             }
         }
         //여기서 게임매니저의 인스턴스의 월드매니저의 SetWorldList(a_LoadItemList)호출
-        GameManager.instance.GetComponentInChildren<WorldManager>().SetWorldList(a_WorldList);
+        GameManager.instance.WdManager.SetWorldList(a_WorldList);
     }// private void JsonWorldInfoLoad()
     
     //챕터로드
@@ -75,12 +80,15 @@ public class LoaderManager : MonoBehaviour
         //로드부분
          for(int i=0; i<a_ChapterList.Count; i++)
         {
-            string[] datas = a_ChapterList[i].Chpater_Map.Split(',');
+            string[] datas = a_ChapterList[i].ChapterName.Split(',');
+            a_ChapterList[i].Chapter_MapList = new List<PercentInfo>();
             for(int j=0; j<datas.Length; j++)
             {
                 string[] Splits = datas[j].Split(':');
-                a_ChapterList[i].Chapter_MapList[j].ID = int.Parse(Splits[0]);
-                a_ChapterList[i].Chapter_MapList[j].Percent = int.Parse(Splits[1]);
+                PercentInfo InsertData = new PercentInfo();
+                InsertData.ID = int.Parse(Splits[0]);
+                InsertData.Percent = int.Parse(Splits[1]);
+                a_ChapterList[i].Chapter_MapList.Add(InsertData);
             }// for(int j=0; j<datas.Length; j++)
         }//for(int i=0; i<a_ChapterList.Count; i++)
 
