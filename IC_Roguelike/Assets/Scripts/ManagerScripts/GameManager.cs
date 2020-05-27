@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager instance;
     public WorldManager WdManager;
+    public ChapterManager ChaptManager;
+    public StageManager StManager;
     //void Awake()
     //{
     //    instance = this;

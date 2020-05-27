@@ -92,7 +92,7 @@ public class LoaderManager : MonoBehaviour
             }// for(int j=0; j<datas.Length; j++)
         }//for(int i=0; i<a_ChapterList.Count; i++)
 
-        GameManager.instance.GetComponentInChildren<ChapterManager>().SetChapterList(a_ChapterList);
+        GameManager.instance.ChaptManager.SetChapterList(a_ChapterList);
     }//   private void JsonChapterInfoLoad()
 
     //스테이지로드
@@ -119,7 +119,7 @@ public class LoaderManager : MonoBehaviour
             }//  for(int j=0; j<datas.Length; j++)
         }//for(int i=0; i<a_StageList.Count;i++)
 
-        GameManager.instance.GetComponentInChildren<StageManager>().SetStageList(a_StageList);
+        GameManager.instance.StManager.SetStageList(a_StageList);
 
     }// private void JsonStageInfoLoad()
 
