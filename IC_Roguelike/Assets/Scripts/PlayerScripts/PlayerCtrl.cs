@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 enum PlayerAni
 {
@@ -18,7 +19,7 @@ public class PlayerCtrl : MonoBehaviour
 {
     //키보드
     float h, v;
-    private float m_MoveSpeed = 1.0f; //초당 10픽셀을 이동해라 라는 속도 (이동속도)
+    private float m_MoveSpeed = 2.0f; //초당 10픽셀을 이동해라 라는 속도 (이동속도)
     Vector3 MoveNextStep;            //보폭을 계산해 주기 위한 변수
     Vector3 MoveHStep;
     Vector3 MoveVStep;
@@ -39,11 +40,14 @@ public class PlayerCtrl : MonoBehaviour
 
    
     //test 이미지
-    public Material[] m_PlayerAni;
+    public Sprite[] m_HeroSprite;
+
+    //test rigi
+    public Rigidbody2D rb;
 
     private void Start()
     {
-        this.GetComponent<MeshRenderer>().material = m_PlayerAni[(int)PlayerAni.Idle];
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = m_HeroSprite[(int)PlayerAni.Idle];
     }
     private void Update()
     {
@@ -57,16 +61,16 @@ public class PlayerCtrl : MonoBehaviour
         h = Input.GetAxisRaw("Horizontal"); //화살표키 좌우키를 눌러주면 -1.0f, 0.0f, 1.0f 사이값을 리턴해 준다.
         v = Input.GetAxisRaw("Vertical");   //화살표키 위아래키를 눌러주면 -1.0f, 0.0f, 1.0f 사이값을 리턴해 준다.
                                             //-------------- 가감속 없이 이동 처리 하는 방법
-        //Debug.Log("h =" + h);
-        //Debug.Log("v =" + v);
+                                            //Debug.Log("h =" + h);
+                                            //Debug.Log("v =" + v);
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) //오른쪽 
-            this.GetComponent<MeshRenderer>().material = m_PlayerAni[(int)PlayerAni.Left];
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = m_HeroSprite[(int)PlayerAni.Right];
         else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-            this.GetComponent<MeshRenderer>().material = m_PlayerAni[(int)PlayerAni.Right];
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = m_HeroSprite[(int)PlayerAni.Left];
         else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
-            this.GetComponent<MeshRenderer>().material = m_PlayerAni[(int)PlayerAni.Back];
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = m_HeroSprite[(int)PlayerAni.Back];
         else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
-            this.GetComponent<MeshRenderer>().material = m_PlayerAni[(int)PlayerAni.Front];
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = m_HeroSprite[(int)PlayerAni.Front];
 
         if (0.0f != h || 0.0f != v) //키보드 이동처리
         {
@@ -74,19 +78,23 @@ public class PlayerCtrl : MonoBehaviour
             //Vector3.right == new Vector3(1.0f, 0.0f, 0.0f)
             //Vector3.forward == new Vector3(0.0f, 0.0f, 1.0f)
             MoveHStep = Vector3.right * h;
-            MoveVStep = Vector3.forward * v;
+            MoveVStep = Vector3.up * v;
 
           
 
             MoveNextStep = MoveHStep + MoveVStep;
-            MoveNextStep = MoveNextStep.normalized * m_MoveSpeed * Time.deltaTime;
-
-            transform.position = transform.position + MoveNextStep;
+            //MoveNextStep = MoveNextStep.normalized * m_MoveSpeed * Time.deltaTime;
+            
+            MoveNextStep = MoveNextStep.normalized * m_MoveSpeed;
+            //transform.position = transform.position + MoveNextStep;
+            
+            rb.velocity = new Vector2(MoveNextStep.x,MoveNextStep.y);
         }
         else
 
         {
-            this.GetComponent<MeshRenderer>().material = m_PlayerAni[(int)PlayerAni.Idle];
+            rb.velocity = new Vector2(0, 0);
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = m_HeroSprite[(int)PlayerAni.Idle];
         }
 
         
