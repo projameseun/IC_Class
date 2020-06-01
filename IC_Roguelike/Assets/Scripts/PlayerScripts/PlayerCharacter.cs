@@ -15,6 +15,11 @@ public class PlayerCharacter : Character
     private Vector2 lastMove;       // 마지막 움직임이 어느 방향이었는지 확인하기 위한 변수
     private bool isMove;    // 플레이어가 움직이는지 확인
 
+    private float h, v;
+    Vector3 moveNextStep;   // 이동속도 계산을 위한 변수
+    Vector3 moveHStep;
+    Vector3 moveVStep;
+
     void Start()
     {
         anim = GetComponent<Animator>();    // 애니메이터 불러오기
@@ -26,21 +31,36 @@ public class PlayerCharacter : Character
 
     void Update()
     {
-        // 좌우 움직이기
-        if (Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Horizontal") < 0)
-        {
-            transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * this.spd * Time.deltaTime, 0f, 0f));
-            lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), 0f); // lastMove의 X 값을 Horizontal로 설정
-        }
-        // 상하 움직이기
-        if (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Vertical") < 0)
-        {
-            transform.Translate(new Vector3(0, Input.GetAxisRaw("Vertical") * this.spd * Time.deltaTime, 0f));
-            lastMove = new Vector2(0f, Input.GetAxisRaw("Vertical")); // lastMove의 Y 값을 Vertical 설정
-        }
-
+        // 플레이어 이동
+        Move();
         // 플레이어 이동 애니메이션
         animCtrl.PlayerAnimCtrl(anim, lastMove, isMove);
+    }
+
+    void Move()
+    {
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
+
+        if (0.0f != h || 0.0f != v)
+        {
+            moveHStep = Vector3.right * h;
+            moveVStep = Vector3.up * v;
+            
+
+            moveNextStep = moveHStep + moveVStep;
+            moveNextStep = moveNextStep.normalized * spd * Time.deltaTime;
+
+            transform.position = transform.position + moveNextStep;
+            if (Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Horizontal") < 0)
+            {
+                lastMove = moveHStep;
+            }
+            if (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Vertical") < 0)
+            {
+                lastMove = moveVStep;
+            }
+        }
     }
 
     // #SetWeapon에서 동작 방식,조작법 변경
