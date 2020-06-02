@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 [System.Serializable]
 public class WorldInfo : MonoBehaviour
@@ -9,7 +10,12 @@ public class WorldInfo : MonoBehaviour
 
     public int Worldid;     //월드 id값
     public string WorldName;    //월드종류 이름값
-    public string Wolrd_RandomChapter; 
+    public string Wolrd_RandomChapter;
+
+
+    //추가
+    public Button m_WorldBtn;   //월드버튼
+     
     
     public WorldInfo() { }
 
@@ -19,6 +25,7 @@ public class WorldInfo : MonoBehaviour
         WorldName = worldName;
         World_RandomChapterList = world_RandomChapterList;
     }
+    
 
     //인게임에서 사용(진행중인 월드가 없으면 리셋)
     //진행중이라면 저장해야하는 데이터
@@ -32,5 +39,28 @@ public class WorldInfo : MonoBehaviour
     public int EndChater;
     //월드 진행도
     public float WorldProgress;
-    
+
+    private void Start()
+    {
+
+        #region WorldClick
+        if (m_WorldBtn != null)
+        {
+            m_WorldBtn.onClick.AddListener(() =>
+            {
+                Debug.Log("WorldClick");
+                //1.랜덤으로 World_RandomChpaterList를 돌린다 
+                //2.퍼센트에 따라서 조건이 나올확률이다.
+                //Random Start
+                for(int i=0; i<10; i++)
+                {
+
+                }// for(int i=0; i<10; i++)
+                //Random Start
+
+            });
+        }// if (m_WorldBtn != null)
+        #endregion WorldClick
+    }
+
 }

@@ -125,9 +125,9 @@ public class LoaderManager : MonoBehaviour
 
     private void Start()
     {
-        GameDataLoad();
+        //GameDataLoad();
 
-        myLoader();
+        //myLoader();
     }
 
     //추가 구현사항
