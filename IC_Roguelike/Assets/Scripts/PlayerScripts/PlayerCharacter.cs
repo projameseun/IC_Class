@@ -26,7 +26,7 @@ public class PlayerCharacter : Character
         animCtrl = GetComponent<AnimationController>(); // 애니메이션컨트롤 불러오기
 
         // 이동속도
-        this.spd = 2f;
+        this.spd = 2;
     }
 
     void Update()
