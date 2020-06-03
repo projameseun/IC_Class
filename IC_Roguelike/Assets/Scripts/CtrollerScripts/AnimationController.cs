@@ -26,4 +26,5 @@ public class AnimationController : MonoBehaviour
         pAnim.SetFloat("LastMoveX", pLastMove.x); // LastMoveX를 lastMove의 X값과 같게 설정
         pAnim.SetFloat("LastMoveY", pLastMove.y); // LastMoveY를 lastMove의 y값과 같게 설정
     }
+
 }
