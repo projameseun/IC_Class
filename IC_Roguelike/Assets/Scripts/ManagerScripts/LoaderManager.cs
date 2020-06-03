@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
+
 [System.Serializable]//이거 반드시 쓸것
 public class Serialization<T>
 {
@@ -60,6 +61,7 @@ public class LoaderManager : MonoBehaviour
                 string[] Splits = datas[j].Split(':');
                 PercentInfo InsertData = new PercentInfo();
                 InsertData.ID = int.Parse(Splits[0]);
+                //InsertData.Percent = float.Parse(Splits[1]);
                 InsertData.Percent = int.Parse(Splits[1]);
                 a_WorldList[i].World_RandomChapterList.Add(InsertData);
             }

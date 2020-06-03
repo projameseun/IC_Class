@@ -16,15 +16,15 @@ public class ChapterManager : MonoBehaviour
         for (int i=0; i<5; i++)
         {
         
-           
+      
             ChapterList.Add(new ChapterInfo() {Chapterid = i+1,
                                                 ChapterName ="테스트" + (i+1).ToString()});
         }
-        Debug.Log("오나");
+        //Debug.Log("오나");
     }
     public void SetChapterList(List<ChapterInfo> a_ChapterList)
     {
-        Debug.Log("챕터 리스트");
+       // Debug.Log("챕터 리스트");
         ChapterList = a_ChapterList;
     }    
 }

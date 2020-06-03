@@ -15,7 +15,7 @@ public class WorldInfo : MonoBehaviour
 
     //추가
     public Button m_WorldBtn;   //월드버튼
-     
+   
     
     public WorldInfo() { }
 
@@ -53,13 +53,28 @@ public class WorldInfo : MonoBehaviour
                 Debug.Log("WorldClick");
                 //1.랜덤으로 World_RandomChpaterList를 돌린다 
                 //2.퍼센트에 따라서 조건이 나올확률이다.
-                //Random Start
-                RandomSelcet();
-                Debug.Log(World_ChapterList.Count);
+                for (int i = 0; i < World_RandomChapterList.Count; i++)
+                {
+                    int ChapterId = PercentInfo.RandomSelcet(World_RandomChapterList);
+
+                    for (int j = 0; j < World_RandomChapterList.Count; j++)
+                    {
+                        if (ChapterId == GameManager.instance.ChaptManager.ChapterList[j].Chapterid)
+                        {
+                            World_ChapterList.Add(GameManager.instance.ChaptManager.ChapterList[j]);
+                            break;
+                        }
+                    }//for (int j = 0; j < World_RandomChapterList.Count; j++)
+                }//for (int i = 0; i < World_RandomChapterList.Count; i++)
+                 //RandomSelcet();
+
+
+
                 for (int i = 0; i < 5; i++)
                 {
                     Debug.Log("확률적으로 나온배열:" + World_ChapterList[i].ChapterName);
                 }
+
             });
         }// if (m_WorldBtn != null)
         #endregion WorldClick
@@ -67,41 +82,5 @@ public class WorldInfo : MonoBehaviour
    
     }
 
-    public void RandomSelcet()
-    {
-        int a_WorldListCount = World_RandomChapterList.Count;
-        Debug.Log(a_WorldListCount);
-       
-        for (int i = 0; i < a_WorldListCount; i++)
-        {
-            int ResultSel = 0;
-            float rand = Random.Range(0.0f,1.0f);
-           
-            float SelectRan = rand * 100.0f;
-            Debug.Log("SelectRan" + SelectRan);
-            float Calc = 0.0f;
 
-            for (int j = 0; j < a_WorldListCount; j++)
-            {
-                //World_ChapterList[i] = 
-                Calc += World_RandomChapterList[j].Percent;
-               
-                if (SelectRan <= Calc)
-                {
-                    //이때넣어준다
-                    ResultSel =  j;
-                   // Debug.Log("Result:" + ResultSel);
-                    World_ChapterList.Add(GameManager.instance.ChaptManager.ChapterList[ResultSel]);
-                    Debug.Log(GameManager.instance.ChaptManager.ChapterList[ResultSel].Chapterid);
-                    break;
-                }
-
-                
-            }
-            
-
-        }
-        //Random Start
-     
-    }
 }

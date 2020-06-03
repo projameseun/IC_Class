@@ -3849,13 +3849,13 @@ MonoBehaviour:
   - ID: 1
     Percent: 5
   - ID: 2
-    Percent: 5
-  - ID: 3
-    Percent: 5
-  - ID: 4
     Percent: 20
+  - ID: 3
+    Percent: 20.5
+  - ID: 4
+    Percent: 20.5
   - ID: 5
-    Percent: 100
+    Percent: 34
   EndChater: 0
   WorldProgress: 0
 --- !u!1 &1997328037
