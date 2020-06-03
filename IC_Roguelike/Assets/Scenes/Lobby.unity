@@ -836,6 +836,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3934455111539476134, guid: ac0389b3ebd01da4b8eeff01978b37fb,
+        type: 3}
+      propertyPath: ChapterList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3934455112650503166, guid: ac0389b3ebd01da4b8eeff01978b37fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3842,13 +3847,15 @@ MonoBehaviour:
   World_ChapterList: []
   World_RandomChapterList:
   - ID: 1
-    Percent: 10
+    Percent: 5
   - ID: 2
-    Percent: 30
+    Percent: 5
   - ID: 3
-    Percent: 40
+    Percent: 5
   - ID: 4
-    Percent: 25
+    Percent: 20
+  - ID: 5
+    Percent: 100
   EndChater: 0
   WorldProgress: 0
 --- !u!1 &1997328037
