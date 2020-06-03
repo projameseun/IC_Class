@@ -48,7 +48,7 @@ public class Monster : Character
 
     void Update()
     {
-        LostPlayer();
+        FindViewTargets();
     }
 
     private void OnDrawGizmosSelected()
@@ -69,7 +69,7 @@ public class Monster : Character
             Debug.DrawRay(originPos, lookDir * viewDistance, Color.green);
             Debug.DrawRay(originPos, horizontalRightDir * viewDistance, Color.cyan);
 
-            FindViewTargets();
+            //FindViewTargets();
         }
     }
 
@@ -93,16 +93,16 @@ public class Monster : Character
 
             if (angle <= viewHalfAngle)
             {
-                RaycastHit2D rayHitedTarget = Physics2D.Raycast(originPos, dir, viewDistance, viewObstacleMask);
-
-                if (rayHitedTarget)
+                RaycastHit2D rayHitedObstacle = Physics2D.Raycast(originPos, dir, viewDistance, viewObstacleMask);
+                RaycastHit2D rayHitedPlayer = Physics2D.Raycast(originPos, dir, viewDistance, viewTargetMask);
+                if (rayHitedObstacle)
                 {
                     LostPlayer();
 
                     if (bDebugMode)
-                        Debug.DrawLine(originPos, rayHitedTarget.point, Color.yellow);
+                        Debug.DrawLine(originPos, rayHitedObstacle.point, Color.yellow);
                 }
-                else
+                else if (rayHitedPlayer) 
                 {
                     hitedTargetContainer.Add(hitedTarget);
                     
@@ -111,10 +111,10 @@ public class Monster : Character
                     if (bDebugMode)
                         Debug.DrawLine(originPos, targetPos, Color.red);
                 }
-            }
-            else
-            {
-                isTrace = false;
+                else
+                {
+                    LostPlayer();
+                }
             }
         }
 
