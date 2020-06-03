@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7133712531010859077}
   - component: {fileID: 7133712531010859076}
   - component: {fileID: 7133712531010859072}
+  - component: {fileID: 7133712531010859079}
   - component: {fileID: 114372841345461002}
   - component: {fileID: 175032282}
   m_Layer: 9
@@ -114,6 +115,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4f9a956083a12409cc8bf34df5630c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7133712531010859079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7133712531010859195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703584b5406ef78439a9c0d975885301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlive: 0
 --- !u!114 &114372841345461002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,8 +144,8 @@ MonoBehaviour:
   dropEXP: 0
   weakPoint: 0
   bDebugMode: 1
-  sight: 90
-  viewDistance: 3
+  sight: 45
+  viewDistance: 1.5
   viewRotate: -63
   viewTargetMask:
     serializedVersion: 2
@@ -139,7 +153,6 @@ MonoBehaviour:
   viewObstacleMask:
     serializedVersion: 2
     m_Bits: 1024
-  collisionRadius: 0.25
 --- !u!58 &175032282
 CircleCollider2D:
   m_ObjectHideFlags: 0

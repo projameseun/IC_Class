@@ -306,8 +306,6 @@ halign=left
 - viewDistance : float
 #시야각의 회전값
 - viewRotate : float;
-#시야각의 회전속도
-- rotateSpeed : float
 #인식가능한타겟의마스크(플레이어)
 - viewTargetMask : LayerMask
 #인식 방해물의 마스크(장애물)
@@ -316,12 +314,6 @@ halign=left
 - hitedTargetContainer : List&lt;Collider2D&gt;
 #시야각의 절반
 - viewHalfAngle : float
-#추적대상위치
-- traceTarget : Transform
-#애니메이션
-- anim : Animator
-#추적중인가?
-- isTrace : bool
 --
 
 #각도 계산
@@ -329,15 +321,7 @@ halign=left
 #각도내 마스크검출 및 라인그리기
 + FindViewTargets() : Collider2D[]
 #씬 기즈모 테스트
-- OnDrawGizmosSelected() : void
-#-180~180의 값을 Up Vector 기준 Local Direction으로 변환시켜줌.
-- AngleToDirZ(float) : Vector2
-#두 Vector 사이의 -180~180 각도 구하기
-- GetAngle(Vector3, Vector3) : GetAngle
-#플레이어 따라가기
-- TracePlayer() : void
-#플레이어 놓침
-- LostPlayer() : void</panel_attributes>
+- OnDrawGizmosSelected() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
