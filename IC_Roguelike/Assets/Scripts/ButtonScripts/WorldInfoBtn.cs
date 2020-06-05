@@ -44,12 +44,12 @@ public class WorldInfoBtn : MonoBehaviour
                     {
                         Debug.Log("확률적으로 나온배열:" + m_WorldInfo.World_ChapterList[i].ChapterName);
                     }
-                }
+                }//     if (GameManager.instance.WdManager.NowPlayWorld.isChapter == false)
 
-                GameManager.instance.WdManager.SelectedWorldID = 1;
-                GameManager.instance.LoaderManager.PlayerPrefs_ChapterListSave(m_WorldInfo.World_ChapterList);
+                //GameManager.instance.WdManager.SelectedWorldID = 1;
+                //GameManager.instance.LoaderManager.PlayerPrefs_ChapterListSave(m_WorldInfo.World_ChapterList);
                 //다섯개가 성성되고 챕터패널이 활성화되는곳
-                // GameManager.instance.ChaptManager.SettingWorld_Chpater(World_ChapterList);
+                GameManager.instance.ChaptManager.SettingWorld_Chpater();
 
             });// m_WorldBtn.onClick.AddListener(() =>
         }// if (m_WorldBtn != null)

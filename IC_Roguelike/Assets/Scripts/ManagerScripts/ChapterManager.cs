@@ -10,6 +10,7 @@ public class ChapterManager : MonoBehaviour
     public List<ChapterInfo> ChapterList = new List<ChapterInfo>();
 
     public GameObject m_ChapterPanel;
+    public GameObject m_ChpaterBtn;
     //임시테스트용이다 지금은 json이없어서
     private void Start()
     {
@@ -32,15 +33,20 @@ public class ChapterManager : MonoBehaviour
         ChapterList = a_ChapterList;
     }    
     
-    public void SettingWorld_Chpater(List<ChapterInfo> a_ChpaterList)
+    public void SettingWorld_Chpater()
     {
+       
         m_ChapterPanel.SetActive(true);
-        NowChapter = a_ChpaterList[0];
+        for (int i = 0; i < GameManager.instance.WdManager.NowPlayWorld.World_ChapterList.Count; i++)
+        {
+           // Instantiate();
+        }
+        //NowChapter = a_ChpaterList[0];
         //Debug.Log(NowChapter.Chapterid);
         //for(int i=0; i<a_ChpaterList.Count; i++)
         //{
-            
+
         //}
-        
+
     }
 }
