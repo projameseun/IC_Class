@@ -30,10 +30,12 @@ public class ChapterManager : MonoBehaviour
     public void SettingWorld_Chpater(List<ChapterInfo> a_ChpaterList)
     {
         m_ChapterPanel.SetActive(true);
-        for(int i=0; i<a_ChpaterList.Count; i++)
-        {
+        NowChapter = a_ChpaterList[0];
+        //Debug.Log(NowChapter.Chapterid);
+        //for(int i=0; i<a_ChpaterList.Count; i++)
+        //{
             
-        }
+        //}
         
     }
 }

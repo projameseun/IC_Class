@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ChapterInfo : MonoBehaviour
@@ -28,6 +29,8 @@ public class ChapterInfo : MonoBehaviour
         {
             m_ChapterBtn.onClick.AddListener(() =>
             {
+
+                SceneManager.LoadScene("Ingame");
 
             });//  m_ChapterBtn.onClick.AddListener(() =>
         }//if(ChapterBtn != null)

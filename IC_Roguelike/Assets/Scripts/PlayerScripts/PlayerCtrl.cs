@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 enum PlayerAni
@@ -122,6 +123,10 @@ public class PlayerCtrl : MonoBehaviour
     }//public void MsPicking(Vector3 a_Pos)
 
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Potal")
+            SceneManager.LoadScene("Lobby");
+    }
 
 }
