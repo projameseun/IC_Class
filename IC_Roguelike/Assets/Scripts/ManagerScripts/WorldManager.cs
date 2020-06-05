@@ -8,6 +8,7 @@ public class WorldManager : MonoBehaviour
 
     public List<WorldInfo> WorldList;
     public int SelectedWorldID;
+    public WorldInfo NowPlayWorld = new WorldInfo();  //진행중인월드
 
     public void SetWorldList(List<WorldInfo> LoadWorldList)
     {

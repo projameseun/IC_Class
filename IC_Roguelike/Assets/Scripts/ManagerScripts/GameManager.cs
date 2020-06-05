@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public ChapterManager ChaptManager;
     public StageManager StManager;
     public PlayerInfoManager PlayManager;
+    public LoaderManager LoaderManager;
     //void Awake()
     //{
     //    instance = this;

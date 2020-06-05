@@ -13,7 +13,6 @@ public class Serialization<T>
     public List<T> Sheet1;
 }
 
-
 public class LoaderManager : MonoBehaviour
 {
     //내부 delegate클래스
@@ -29,6 +28,9 @@ public class LoaderManager : MonoBehaviour
         myLoader += JsonDiffcultyWeightLoad;
         myLoader += JsonChapterInfoLoad;
         myLoader += JsonStageInfoLoad;
+        myLoader += PlayerPrefs_ChapterListLoad;
+
+
     }
     private void JsonDiffcultyWeightLoad()  //챕터의난이도
     {
@@ -125,10 +127,67 @@ public class LoaderManager : MonoBehaviour
 
     }// private void JsonStageInfoLoad()
 
+    void PlayerPrefs_ChapterListLoad()
+    {
+
+        if (PlayerPrefs.HasKey("WorldID"))
+        {
+            Debug.Log("로드중입니다");
+
+            GameManager.instance.WdManager.SelectedWorldID = PlayerPrefs.GetInt("WorldID");
+
+            if (PlayerPrefs.GetString("WorldSelect") == "true")
+            {
+                Debug.Log("해당월드가 존재합니다");
+                GameManager.instance.WdManager.NowPlayWorld.isChapter = true;
+            }
+            else
+            {
+                Debug.Log("해당월드 셀렉이 존재하지않습니다");
+                return;
+            }
+
+
+            GameManager.instance.WdManager.NowPlayWorld.Worldid = PlayerPrefs.GetInt("WorldID");
+            
+            for (int i = 0; i < 5; i++)
+            {
+                ChapterInfo newNode = new ChapterInfo();
+                newNode.Chapterid = PlayerPrefs.GetInt("ChpaterID " + (i +1));
+                newNode.ChapterName = PlayerPrefs.GetString("ChapterName " + (i + 1));
+                
+                GameManager.instance.WdManager.NowPlayWorld.World_ChapterList.Add(newNode);
+            }
+        }
+    }
+
+    public void PlayerPrefs_ChapterListSave(List<ChapterInfo> a_ChapterList)
+    {
+        //월드를 누르고챕터가 생성되면 월드하나가 무조건 저장된다.
+       // bool isActive = true;
+        PlayerPrefs.SetString("WorldSelect", "true");
+
+        PlayerPrefs.SetInt("WorldID", GameManager.instance.WdManager.SelectedWorldID);
+
+
+
+        for (int i = 0; i < a_ChapterList.Count; i++)
+        {
+            string Savedata = "ChapterName " + (i+1);
+            PlayerPrefs.SetString(Savedata, a_ChapterList[i].ChapterName);
+            string Savedata2 = "ChpaterID " + (i +1);
+            PlayerPrefs.SetInt(Savedata2, a_ChapterList[i].Chapterid);
+
+        }
+
+        PlayerPrefs.Save();
+       //PlayerPrefs.DeleteAll();
+    }
+
     private void Start()
     {
         //GameDataLoad();
-
+         PlayerPrefs_ChapterListLoad();
         //myLoader();
     }
 

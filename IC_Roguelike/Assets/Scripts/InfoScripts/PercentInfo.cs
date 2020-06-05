@@ -41,14 +41,14 @@ public class PercentInfo //: MonoBehaviour
         {
 
             float rand = Random.Range(0.0f, 100.0f);
-            Debug.Log("rand" + rand);
+            //Debug.Log("rand" + rand);
             CompareResult += a_RandomList[i].Percent;
 
             if (rand <= CompareResult)
             {
                 //이때넣어준다
                 ResultSel = i + 1;
-                Debug.Log("Result:" + ResultSel);
+                //Debug.Log("Result:" + ResultSel);
 
                 return ResultSel;
             }//if (rand <=CompareResult )

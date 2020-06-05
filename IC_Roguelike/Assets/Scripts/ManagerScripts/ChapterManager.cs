@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 
+
 public class ChapterManager : MonoBehaviour
 {
     public ChapterInfo NowChapter;
@@ -13,11 +14,15 @@ public class ChapterManager : MonoBehaviour
     private void Start()
     {
         m_ChapterPanel.SetActive(false);
-        for (int i=0; i<5; i++)
+        //처음설정할때만 
+        for (int i = 0; i < 5; i++)
         {
-       
-            ChapterList.Add(new ChapterInfo() {Chapterid = i+1,
-                                                ChapterName ="테스트" + (i+1).ToString()});
+
+            ChapterList.Add(new ChapterInfo()
+            {
+                Chapterid = i + 1,
+                ChapterName = "테스트" + (i + 1).ToString()
+            });
         }
         //Debug.Log("오나");
     }

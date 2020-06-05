@@ -1,42 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class ChapterInfo : MonoBehaviour
+[System.Serializable]
+public class ChapterInfo 
 {
-   
     public int Chapterid;    //챕터 테이블 ID값
     public string ChapterName;  //챕터 종류 이름값
- 
-    public Button m_ChapterBtn;
-   
+
 
     public ChapterInfo() { }
     public ChapterInfo(int chapterid, string chapterName, string chpater_Map)
     {
         Chapterid = chapterid;
         ChapterName = chapterName;
-        
+
     }
 
-    private void Start()
-    {
-       
-
-        if(m_ChapterBtn != null)
-        {
-            m_ChapterBtn.onClick.AddListener(() =>
-            {
-
-                SceneManager.LoadScene("Ingame");
-
-            });//  m_ChapterBtn.onClick.AddListener(() =>
-        }//if(ChapterBtn != null)
-    }
-
-    
 
 
     //인게임에서 사용(진행중인 월드가 없으면 리셋)
@@ -61,6 +41,4 @@ public class ChapterInfo : MonoBehaviour
     public List<int> diffcultyMode = new List<int>();
     //완료 되었는가?
     public bool IsClear = false;
-
-    
 }
