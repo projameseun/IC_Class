@@ -16,7 +16,7 @@ public class WorldInfo : MonoBehaviour
     //추가
     public Button m_WorldBtn;   //월드버튼
    
-    
+
     public WorldInfo() { }
 
     public WorldInfo(int worldid, string worldName, List<PercentInfo> world_RandomChapterList)
@@ -42,7 +42,7 @@ public class WorldInfo : MonoBehaviour
 
     private void Start()
     {
-
+        
        
         #region WorldClick
         if (m_WorldBtn != null)
@@ -68,14 +68,18 @@ public class WorldInfo : MonoBehaviour
                 }//for (int i = 0; i < World_RandomChapterList.Count; i++)
                  //RandomSelcet();
 
-
-
+                //로그찍는곳 제대로 챕터리스트 들어갔는지 확인 나중에 지울 예정
                 for (int i = 0; i < 5; i++)
                 {
                     Debug.Log("확률적으로 나온배열:" + World_ChapterList[i].ChapterName);
                 }
 
-            });
+
+                //다섯개가 성성되고 챕터패널이 활성화되는곳
+
+                GameManager.instance.ChaptManager.SettingWorld_Chpater(World_ChapterList);
+                
+            });// m_WorldBtn.onClick.AddListener(() =>
         }// if (m_WorldBtn != null)
         #endregion WorldClick
 

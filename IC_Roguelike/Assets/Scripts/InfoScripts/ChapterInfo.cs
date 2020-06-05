@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChapterInfo : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class ChapterInfo : MonoBehaviour
     public int Chapterid;    //챕터 테이블 ID값
     public string ChapterName;  //챕터 종류 이름값
  
+    public Button m_ChapterBtn;
+   
 
     public ChapterInfo() { }
     public ChapterInfo(int chapterid, string chapterName, string chpater_Map)
@@ -16,6 +19,22 @@ public class ChapterInfo : MonoBehaviour
         ChapterName = chapterName;
         
     }
+
+    private void Start()
+    {
+       
+
+        if(m_ChapterBtn != null)
+        {
+            m_ChapterBtn.onClick.AddListener(() =>
+            {
+
+            });//  m_ChapterBtn.onClick.AddListener(() =>
+        }//if(ChapterBtn != null)
+    }
+
+    
+
 
     //인게임에서 사용(진행중인 월드가 없으면 리셋)
     //진행중이라면 저장해야 하는 데이터
