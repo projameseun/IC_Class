@@ -23,15 +23,16 @@ public class WorldInfo
     //인게임에서 사용(진행중인 월드가 없으면 리셋)
     //진행중이라면 저장해야하는 데이터
     //해당월드의 챕터 구성리스트(화염챕터1 화염챕터)
+    [Header("챕터리스트")]
     public List<ChapterInfo> World_ChapterList = new List<ChapterInfo>();
 
     ////해당월드를 구성할수 있는 챕터리스트
     public List<PercentInfo> World_RandomChapterList;
 
     //마지막 챕터의 id
-    public int EndChater;
+      
     //월드 진행도
-    public float WorldProgress;
+    public int ChapterProgress; //챕터 저장 
 
     public bool isChapter;
 }

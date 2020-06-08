@@ -8,8 +8,10 @@ public class GameManager : MonoBehaviour
     public WorldManager WdManager;
     public ChapterManager ChaptManager;
     public StageManager StManager;
-    public PlayerInfoManager PlayManager;
-    public LoaderManager LoaderManager;
+    public PlayerInfoManager PlayManager;   
+    public LoaderManager LoaderManager;     //로드를 총관리하는곳
+    public SaveManager SaveManager;         //세이브를 총관리하는곳
+    public LobbyUIManager LobbyUIManger;
     //void Awake()
     //{
     //    instance = this;

@@ -74,7 +74,9 @@
     <Compile Include="Assets\Scripts\ManagerScripts\ChapterManager.cs" />
     <Compile Include="Assets\Scripts\ManagerScripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ManagerScripts\LoaderManager.cs" />
+    <Compile Include="Assets\Scripts\ManagerScripts\LobbyUIManager.cs" />
     <Compile Include="Assets\Scripts\ManagerScripts\PlayerInfoManager.cs" />
+    <Compile Include="Assets\Scripts\ManagerScripts\SaveManager.cs" />
     <Compile Include="Assets\Scripts\ManagerScripts\StageManager.cs" />
     <Compile Include="Assets\Scripts\ManagerScripts\WorldManager.cs" />
     <Compile Include="Assets\Scripts\MonsterScripts\Monster.cs" />

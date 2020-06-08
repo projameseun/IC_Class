@@ -127,6 +127,8 @@ public class LoaderManager : MonoBehaviour
 
     }// private void JsonStageInfoLoad()
 
+
+    #region PlayerPrefsLoad
     void PlayerPrefs_ChapterListLoad()
     {
 
@@ -157,32 +159,15 @@ public class LoaderManager : MonoBehaviour
                 newNode.ChapterName = PlayerPrefs.GetString("ChapterName " + (i + 1));
                 
                 GameManager.instance.WdManager.NowPlayWorld.World_ChapterList.Add(newNode);
+               
+                
             }
-        }
-    }
 
-    public void PlayerPrefs_ChapterListSave(List<ChapterInfo> a_ChapterList)
-    {
-        //월드를 누르고챕터가 생성되면 월드하나가 무조건 저장된다.
-       // bool isActive = true;
-        PlayerPrefs.SetString("WorldSelect", "true");
+           
+        }//if (PlayerPrefs.HasKey("WorldID"))
+    }// void PlayerPrefs_ChapterListLoad()
+    #endregion PlayerPrefsLoad
 
-        PlayerPrefs.SetInt("WorldID", GameManager.instance.WdManager.SelectedWorldID);
-
-
-
-        for (int i = 0; i < a_ChapterList.Count; i++)
-        {
-            string Savedata = "ChapterName " + (i+1);
-            PlayerPrefs.SetString(Savedata, a_ChapterList[i].ChapterName);
-            string Savedata2 = "ChpaterID " + (i +1);
-            PlayerPrefs.SetInt(Savedata2, a_ChapterList[i].Chapterid);
-
-        }
-
-        PlayerPrefs.Save();
-       //PlayerPrefs.DeleteAll();
-    }
 
     private void Start()
     {

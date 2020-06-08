@@ -7,7 +7,7 @@ public class WorldManager : MonoBehaviour
    //public static WorldManager instance = null;
 
     public List<WorldInfo> WorldList;
-    public int SelectedWorldID;
+    public int SelectedWorldID = 0;
     public WorldInfo NowPlayWorld = new WorldInfo();  //진행중인월드
 
     public void SetWorldList(List<WorldInfo> LoadWorldList)

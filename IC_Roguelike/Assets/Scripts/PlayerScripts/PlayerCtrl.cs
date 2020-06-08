@@ -126,7 +126,10 @@ public class PlayerCtrl : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Potal")
-            SceneManager.LoadScene("Lobby");
+        {
+            GameManager.instance.LobbyUIManger.m_Dugeon.SetActive(true);
+        }
+           // SceneManager.LoadScene("Lobby");
     }
 
 }
