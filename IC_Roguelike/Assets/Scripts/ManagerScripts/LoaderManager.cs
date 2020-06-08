@@ -7,7 +7,6 @@ using System.IO;
 [System.Serializable]//이거 반드시 쓸것
 public class Serialization<T>
 {
-
     public Serialization(List<T> _target) => Sheet1 = _target;
 
     public List<T> Sheet1;
@@ -137,7 +136,8 @@ public class LoaderManager : MonoBehaviour
             Debug.Log("로드중입니다");
 
             GameManager.instance.WdManager.SelectedWorldID = PlayerPrefs.GetInt("WorldID");
-
+  
+            GameManager.instance.WdManager.NowPlayWorld.ChapterProgress = PlayerPrefs.GetInt("ChpaterProgress");
             if (PlayerPrefs.GetString("WorldSelect") == "true")
             {
                 Debug.Log("해당월드가 존재합니다");

@@ -12,17 +12,17 @@ public class ChapterManager : MonoBehaviour
     //임시테스트용이다 지금은 json이없어서
     private void Start()
     {
-        
-        //처음설정할때만 
-        //for (int i = 0; i < 5; i++)
-        //{
 
-        //    ChapterList.Add(new ChapterInfo()
-        //    {
-        //        Chapterid = i + 1,
-        //        ChapterName = "테스트" + (i + 1).ToString()
-        //    });
-        //}
+        //처음설정할때만 
+        for (int i = 0; i < 5; i++)
+        {
+
+            ChapterList.Add(new ChapterInfo()
+            {
+                Chapterid = i + 1,
+                ChapterName = "테스트" + (i + 1).ToString()
+            });
+        }
         //Debug.Log("오나");
     }
     public void SetChapterList(List<ChapterInfo> a_ChapterList)

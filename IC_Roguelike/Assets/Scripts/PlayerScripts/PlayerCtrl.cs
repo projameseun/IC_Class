@@ -128,6 +128,9 @@ public class PlayerCtrl : MonoBehaviour
         if (collision.gameObject.tag == "Potal")
         {
             GameManager.instance.LobbyUIManger.m_Dugeon.SetActive(true);
+            WorldInfoBtn a_Object = new WorldInfoBtn();
+            a_Object.TestWorld();
+            //GameManager.instance.LobbyUIManger.SettingWorld_WorldList();
         }
            // SceneManager.LoadScene("Lobby");
     }

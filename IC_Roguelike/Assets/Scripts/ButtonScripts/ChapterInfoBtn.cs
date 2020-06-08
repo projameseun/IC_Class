@@ -8,6 +8,7 @@ public class ChapterInfoBtn : MonoBehaviour
 {
     public Button m_ChapterBtn;
     public Text m_Text;
+    public int Count;   //현재진행중인챕터인덱스숫자
     //여기에서 Now챕터를 만들어야된다 
     private void Start()
     {
@@ -15,7 +16,11 @@ public class ChapterInfoBtn : MonoBehaviour
         {
             m_ChapterBtn.onClick.AddListener(() =>
             {
-
+                //현재진행중인챕터 저장 
+                //월드에 해당되는 챕터 저장 
+                GameManager.instance.SaveManager.PlayerPrefs_ChapterListSave();
+                int NowChapterCount = GameManager.instance.WdManager.NowPlayWorld.ChapterProgress;
+                GameManager.instance.ChaptManager.NowChapter = GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[NowChapterCount];
                 SceneManager.LoadScene("Ingame");
 
             });//  m_ChapterBtn.onClick.AddListener(() =>

@@ -265,19 +265,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180094352}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f6fb86b6f2c8c34c82912fbe4881a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_WorldBtn: {fileID: 180094355}
   m_WorldInfo:
-    Worldid: 0
-    WorldName: 
+    Worldid: 5
+    WorldName: "\uC6D4\uB4DC5"
     Wolrd_RandomChapter: 
     World_ChapterList: []
-    World_RandomChapterList: []
+    World_RandomChapterList:
+    - ID: 1
+      Percent: 5
+    - ID: 2
+      Percent: 20
+    - ID: 3
+      Percent: 20.5
+    - ID: 4
+      Percent: 20.5
+    - ID: 5
+      Percent: 34
     ChapterProgress: 0
+    EndChapter: 0
     isChapter: 0
 --- !u!114 &180094355
 MonoBehaviour:
@@ -333,7 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -547,7 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1030,7 +1041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1188,7 +1199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1693,19 +1704,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188155778}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f6fb86b6f2c8c34c82912fbe4881a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_WorldBtn: {fileID: 1188155781}
   m_WorldInfo:
-    Worldid: 0
+    Worldid: 6
     WorldName: 
     Wolrd_RandomChapter: 
     World_ChapterList: []
-    World_RandomChapterList: []
+    World_RandomChapterList:
+    - ID: 1
+      Percent: 5
+    - ID: 2
+      Percent: 20
+    - ID: 3
+      Percent: 20.5
+    - ID: 4
+      Percent: 20.5
+    - ID: 5
+      Percent: 34
     ChapterProgress: 0
+    EndChapter: 0
     isChapter: 0
 --- !u!114 &1188155781
 MonoBehaviour:
@@ -1761,7 +1783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2282,6 +2304,12 @@ MonoBehaviour:
   m_ChpaterPrefab: {fileID: 8077772212318585968, guid: 2a06a006db9d65d48969f387f5e229f5,
     type: 3}
   m_Dugeon: {fileID: 1311039654}
+  World1: {fileID: 1348972880}
+  World2: {fileID: 1810003373}
+  World3: {fileID: 1952951004}
+  World4: {fileID: 2131695631}
+  World5: {fileID: 180094352}
+  World6: {fileID: 1188155778}
 --- !u!4 &1288400019
 Transform:
   m_ObjectHideFlags: 0
@@ -2347,7 +2375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2613,6 +2641,16 @@ PrefabInstance:
       propertyPath: m_WorldInfo.World_RandomChapterList.Array.data[4].Percent
       value: 34
       objectReference: {fileID: 0}
+    - target: {fileID: 3861475960348161229, guid: 772d8afad9fd9434f99709b924906f09,
+        type: 3}
+      propertyPath: m_WorldInfo.WorldName
+      value: "\uC6D4\uB4DC1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8789220129460952942, guid: 772d8afad9fd9434f99709b924906f09,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8789220129590599474, guid: 772d8afad9fd9434f99709b924906f09,
         type: 3}
       propertyPath: m_Name
@@ -2729,6 +2767,12 @@ PrefabInstance:
 --- !u!224 &1340504999 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8789220129590599475, guid: 772d8afad9fd9434f99709b924906f09,
+    type: 3}
+  m_PrefabInstance: {fileID: 1340504998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1348972880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8789220129590599474, guid: 772d8afad9fd9434f99709b924906f09,
     type: 3}
   m_PrefabInstance: {fileID: 1340504998}
   m_PrefabAsset: {fileID: 0}
@@ -2978,7 +3022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3157,19 +3201,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810003373}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f6fb86b6f2c8c34c82912fbe4881a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_WorldBtn: {fileID: 1810003376}
   m_WorldInfo:
-    Worldid: 0
-    WorldName: 
+    Worldid: 2
+    WorldName: "\uC6D4\uB4DC2"
     Wolrd_RandomChapter: 
     World_ChapterList: []
-    World_RandomChapterList: []
+    World_RandomChapterList:
+    - ID: 1
+      Percent: 5
+    - ID: 2
+      Percent: 20
+    - ID: 3
+      Percent: 20.5
+    - ID: 4
+      Percent: 20.5
+    - ID: 5
+      Percent: 34
     ChapterProgress: 0
+    EndChapter: 0
     isChapter: 0
 --- !u!114 &1810003376
 MonoBehaviour:
@@ -3225,7 +3280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3293,19 +3348,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952951004}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f6fb86b6f2c8c34c82912fbe4881a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_WorldBtn: {fileID: 1952951007}
   m_WorldInfo:
-    Worldid: 0
-    WorldName: 
+    Worldid: 3
+    WorldName: "\uC6D4\uB4DC3"
     Wolrd_RandomChapter: 
     World_ChapterList: []
-    World_RandomChapterList: []
+    World_RandomChapterList:
+    - ID: 1
+      Percent: 5
+    - ID: 2
+      Percent: 20
+    - ID: 3
+      Percent: 20.5
+    - ID: 4
+      Percent: 20.5
+    - ID: 5
+      Percent: 34
     ChapterProgress: 0
+    EndChapter: 0
     isChapter: 0
 --- !u!114 &1952951007
 MonoBehaviour:
@@ -3361,7 +3427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3495,19 +3561,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131695631}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f6fb86b6f2c8c34c82912fbe4881a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_WorldBtn: {fileID: 2131695634}
   m_WorldInfo:
-    Worldid: 0
-    WorldName: 
+    Worldid: 4
+    WorldName: "\uC6D4\uB4DC4"
     Wolrd_RandomChapter: 
     World_ChapterList: []
-    World_RandomChapterList: []
+    World_RandomChapterList:
+    - ID: 1
+      Percent: 5
+    - ID: 2
+      Percent: 20
+    - ID: 3
+      Percent: 20.5
+    - ID: 4
+      Percent: 20.5
+    - ID: 5
+      Percent: 34
     ChapterProgress: 0
+    EndChapter: 0
     isChapter: 0
 --- !u!114 &2131695634
 MonoBehaviour:
@@ -3563,7 +3640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

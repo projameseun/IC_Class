@@ -3,16 +3,143 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class LobbyUIManager : MonoBehaviour
 {
     public GameObject m_ChapterPanel;
     public ScrollRect m_ChapterScroll;
     public GameObject m_ChpaterPrefab;
+   // public GameObject m_WorldPrefab;
     public GameObject m_Dugeon;
+
+    [Header("테스트하는곳")]
+    public GameObject World1;
+    public GameObject World2;
+    public GameObject World3;
+    public GameObject World4;
+    public GameObject World5;
+    public GameObject World6;
+
     private void Start()
     {
         GameManager.instance.LobbyUIManger = this;
         m_ChapterPanel.SetActive(false);
+    }
+
+    public void SettingWorld_WorldList()
+    {
+        //월드 프리팹으로 변경하며 그때 쓰기 
+        for (int i = 0; i < 5; i++)
+        {
+            //1.프리팹 content생성 (Chpater)
+            //2.Id값 넣어주기 
+            //3.지금선택된 챕터가 아니라면 다른 챕터들은 버튼 안되게하기 
+            
+            if(i == GameManager.instance.WdManager.SelectedWorldID - 1)
+            {
+                if(i == 0)
+                {
+                
+                    World1.GetComponent<Image>().raycastTarget = true;
+
+                    World2.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World2.GetComponent<Image>().raycastTarget = false;
+                    World3.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World3.GetComponent<Image>().raycastTarget = false;
+                    World4.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World4.GetComponent<Image>().raycastTarget = false;
+                    World5.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World5.GetComponent<Image>().raycastTarget = false;
+                    World6.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World6.GetComponent<Image>().raycastTarget = false;
+                }
+                else if(i == 1)
+                {
+                    Debug.Log("여기로들어오나 확인");
+                    World2.GetComponent<Image>().raycastTarget = true;
+                    World2.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+
+                    World1.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World1.GetComponent<Image>().raycastTarget = false;
+                    World3.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World3.GetComponent<Image>().raycastTarget = false;
+                    World4.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World4.GetComponent<Image>().raycastTarget = false;
+                    World5.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World5.GetComponent<Image>().raycastTarget = false;
+                    World6.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World6.GetComponent<Image>().raycastTarget = false;
+                }
+                else if(i == 2)
+                {
+                    World3.GetComponent<Image>().raycastTarget = true;
+                    World3.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+
+                    World1.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World1.GetComponent<Image>().raycastTarget = false;
+                    World2.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World2.GetComponent<Image>().raycastTarget = false;
+                    World4.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World4.GetComponent<Image>().raycastTarget = false;
+                    World5.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World5.GetComponent<Image>().raycastTarget = false;
+                    World6.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World6.GetComponent<Image>().raycastTarget = false;
+                }
+                else if (i == 3)
+                {
+                    World4.GetComponent<Image>().raycastTarget = true;
+                    World4.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+
+                    World1.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World1.GetComponent<Image>().raycastTarget = false;
+                    World2.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World2.GetComponent<Image>().raycastTarget = false;
+                    World3.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World3.GetComponent<Image>().raycastTarget = false;
+                    World5.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World5.GetComponent<Image>().raycastTarget = false;
+                    World6.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World6.GetComponent<Image>().raycastTarget = false;
+                }
+                else if (i == 4)
+                {
+                    World5.GetComponent<Image>().raycastTarget = true;
+                    World5.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+
+                    World1.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World1.GetComponent<Image>().raycastTarget = false;
+                    World2.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World2.GetComponent<Image>().raycastTarget = false;
+                    World4.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World4.GetComponent<Image>().raycastTarget = false;
+                    World3.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World3.GetComponent<Image>().raycastTarget = false;
+                    World6.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World6.GetComponent<Image>().raycastTarget = false;
+                }
+                else if (i == 5)
+                {
+                    World6.GetComponent<Image>().raycastTarget = true;
+                    World6.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+
+                    World1.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World1.GetComponent<Image>().raycastTarget = false;
+                    World2.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World2.GetComponent<Image>().raycastTarget = false;
+                    World4.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World4.GetComponent<Image>().raycastTarget = false;
+                    World5.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World5.GetComponent<Image>().raycastTarget = false;
+                    World3.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+                    World3.GetComponent<Image>().raycastTarget = false;
+                }
+            }
+
+ 
+         
+
+        }
     }
 
     public void SettingWorld_ChpaterList()
@@ -28,8 +155,9 @@ public class LobbyUIManager : MonoBehaviour
             //3.지금선택된 챕터가 아니라면 다른 챕터들은 버튼 안되게하기 
             GameObject MakedObject =
             Instantiate(m_ChpaterPrefab, m_ChapterScroll.content.transform);
+           
             //테스트
-            if (i != 0)
+            if (i != GameManager.instance.WdManager.NowPlayWorld.ChapterProgress)
             {
                 MakedObject.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
                 MakedObject.GetComponent<Image>().raycastTarget = false;
@@ -37,8 +165,10 @@ public class LobbyUIManager : MonoBehaviour
             else
             {
                 MakedObject.GetComponent<Image>().raycastTarget = true;
+               
             }
             MakedObject.GetComponent<ChapterInfoBtn>().m_Text.text = GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[i].Chapterid.ToString();
+            MakedObject.GetComponent<ChapterInfoBtn>().Count = i+1;
             // Debug.Log(m_ChpaterBtn.GetComponent<Text>().text);
 
         }
