@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class GameManager : MonoBehaviour
     public LoaderManager LoaderManager;     //로드를 총관리하는곳
     public SaveManager SaveManager;         //세이브를 총관리하는곳
     public LobbyUIManager LobbyUIManger;
+
+    //초기화버튼 나중에지울거
+    public Button InitBtn;
     //void Awake()
     //{
     //    instance = this;
@@ -26,6 +30,17 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        if(InitBtn != null)
+        {
+            InitBtn.onClick.AddListener(() =>
+            {
+                PlayerPrefs.DeleteAll();
+            });
+        }
     }
 
 }

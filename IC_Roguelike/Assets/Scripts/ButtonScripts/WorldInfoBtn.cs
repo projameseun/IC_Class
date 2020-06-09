@@ -24,11 +24,12 @@ public class WorldInfoBtn : MonoBehaviour
                 //2.퍼센트에 따라서 조건이 나올확률이다.
                 if (GameManager.instance.WdManager.NowPlayWorld.isChapter == false) //챕터가 만약에 저장된게없다면 들어오게됨
                 {
-                    Debug.Log("지금이기회다");
+                    
                     RandomSetting();
 
                     GameManager.instance.WdManager.NowPlayWorld = m_WorldInfo;
                     GameManager.instance.WdManager.SelectedWorldID = m_WorldInfo.Worldid;
+                    GameManager.instance.WdManager.NowPlayWorld.isChapter = true;
                     //처음 저장할대 제대로 로그찍히는지 보는곳
                     // 로그찍는곳 제대로 챕터리스트 들어갔는지 확인 나중에 지울 예정
                     //for (int i = 0; i < 5; i++)

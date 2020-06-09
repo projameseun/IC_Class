@@ -37,6 +37,8 @@ public class TestInfo : MonoBehaviour
                     GameManager.instance.SaveManager.PlayerPrefs_ChapterClear();
                     SceneManager.LoadScene("Lobby");
                     Debug.Log("챕터를 모두 완료했습니다");
+                    if (GameManager.instance.WdManager.SelectedWorldID >= 5)
+                        PlayerPrefs.DeleteAll();
                     //월드세팅을 해준다
                 }
             });
