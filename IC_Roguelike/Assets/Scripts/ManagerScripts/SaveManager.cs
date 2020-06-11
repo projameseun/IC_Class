@@ -15,7 +15,9 @@ public class SaveManager : MonoBehaviour
     {
         mySave = null;
 
+        //mySave += PlayerPrefs_WorldChapterListSave;
         mySave += JsonWorldListSave;
+       
         Debug.Log("GameDataSave");
 
       
@@ -33,27 +35,22 @@ public class SaveManager : MonoBehaviour
         Debug.Log("저장완료");
     }
 
-    public void PlayerPrefs_WorldChapterListSave(List<ChapterInfo> a_ChapterList)
+
+
+    public void PlayerPrefs_WorldChapterListSave()
     {
+
         //월드를 누르고챕터가 생성되면 월드하나가 무조건 저장된다.
-        // bool isActive = true;
-        if (GameManager.instance.WdManager.SelectedWorldID != 0)
-        {
-            //진행중인 월드가없을때 들어간다
-            PlayerPrefs.SetString("WorldSelect", "true");   //
-        }
-    
+ 
       
         PlayerPrefs.SetInt("WorldID", GameManager.instance.WdManager.SelectedWorldID);
-       
-
-
-        for (int i = 0; i < a_ChapterList.Count; i++)
+     
+        for (int i = 0; i < GameManager.instance.WdManager.NowPlayWorld.World_ChapterList.Count; i++)
         {
             string Savedata = "ChapterName " + (i + 1);
-            PlayerPrefs.SetString(Savedata, a_ChapterList[i].ChapterName);
+            PlayerPrefs.SetString(Savedata, GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[i].ChapterName);
             string Savedata2 = "ChpaterID " + (i + 1);
-            PlayerPrefs.SetInt(Savedata2, a_ChapterList[i].Chapterid);
+            PlayerPrefs.SetInt(Savedata2,GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[i].Chapterid);
  
         }
 

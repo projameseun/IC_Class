@@ -60,8 +60,9 @@ public class LobbyUIManager : MonoBehaviour
 
         m_ChapterPanel.SetActive(true);
         //지금은 예시로 다섯개 지정해놨는데 나중에는 카운터만큼 들어가게한다 
-        Debug.Log(GameManager.instance.WdManager.NowPlayWorld.World_ChapterList.Count);
+        //Debug.Log(GameManager.instance.WdManager.NowPlayWorld.World_ChapterList.Count);
         int Chapteidx = GameManager.instance.WdManager.SelectedWorldID - 1;
+        //Debug.Log("ChpaterIdx" + Chapteidx);
         for (int i = 0; i<GameManager.instance.WdManager.WorldList[Chapteidx].World_ChapterList.Count; i++)
         {
             //1.프리팹 content생성 (Chpater)

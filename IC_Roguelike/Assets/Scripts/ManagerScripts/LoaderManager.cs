@@ -28,6 +28,7 @@ public class LoaderManager : MonoBehaviour
         //myLoader += JsonChapterInfoLoad;
         //myLoader += JsonStageInfoLoad;
         myLoader += PlayerPrefs_ChapterListLoad;
+     
 
 
     }
@@ -146,16 +147,7 @@ public class LoaderManager : MonoBehaviour
             GameManager.instance.WdManager.SelectedWorldID = PlayerPrefs.GetInt("WorldID");
   
             GameManager.instance.WdManager.NowPlayWorld.ChapterProgress = PlayerPrefs.GetInt("ChpaterProgress");
-            if (PlayerPrefs.GetString("WorldSelect") == "true")
-            {
-                Debug.Log("해당월드가 존재합니다");
-                GameManager.instance.WdManager.NowPlayWorld.isChapter = true;
-            }
-            else
-            {
-                Debug.Log("해당월드 셀렉이 존재하지않습니다");
-                return;
-            }
+      
 
 
             GameManager.instance.WdManager.NowPlayWorld.Worldid = PlayerPrefs.GetInt("WorldID");
@@ -170,8 +162,13 @@ public class LoaderManager : MonoBehaviour
                
                 
             }
+            int Count = GameManager.instance.WdManager.SelectedWorldID- 1;
+           //랜덤챕터리스트 불러오는곳
+           for(int i=0; i<GameManager.instance.WdManager.WorldList[Count].World_RandomChapterList.Count; i++)
+            {
+                PlayerPrefs.GetString("RandomListComplete" + i, "true");
+            }
 
-           
         }//if (PlayerPrefs.HasKey("WorldID"))
     }// void PlayerPrefs_ChapterListLoad()
     #endregion PlayerPrefsLoad
