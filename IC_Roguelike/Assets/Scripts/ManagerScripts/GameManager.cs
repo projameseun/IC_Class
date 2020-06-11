@@ -39,12 +39,8 @@ public class GameManager : MonoBehaviour
             InitBtn.onClick.AddListener(() =>
             {
                 PlayerPrefs.DeleteAll();
-                GameManager.instance.WdManager.WorldList.Clear();
-                GameManager.instance.SaveManager.mySave();
             });
         }
-
-        GameManager.instance.SaveManager.GameDataSave();
     }
 
 }

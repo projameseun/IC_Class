@@ -274,7 +274,6 @@ MonoBehaviour:
   m_WorldInfo:
     Worldid: 5
     WorldName: "\uC6D4\uB4DC5"
-    WorldActivation: 0
     Wolrd_RandomChapter: 
     World_ChapterList: []
     World_RandomChapterList:
@@ -1834,7 +1833,6 @@ MonoBehaviour:
   m_WorldInfo:
     Worldid: 6
     WorldName: 
-    WorldActivation: 0
     Wolrd_RandomChapter: 
     World_ChapterList: []
     World_RandomChapterList:
@@ -2426,13 +2424,12 @@ MonoBehaviour:
   m_ChpaterPrefab: {fileID: 8077772212318585968, guid: 2a06a006db9d65d48969f387f5e229f5,
     type: 3}
   m_Dugeon: {fileID: 1311039654}
-  WorldActivation:
-  - {fileID: 1348972880}
-  - {fileID: 1810003373}
-  - {fileID: 1952951004}
-  - {fileID: 2131695631}
-  - {fileID: 180094352}
-  - {fileID: 1188155778}
+  World1: {fileID: 1348972880}
+  World2: {fileID: 1810003373}
+  World3: {fileID: 1952951004}
+  World4: {fileID: 2131695631}
+  World5: {fileID: 180094352}
+  World6: {fileID: 1188155778}
 --- !u!4 &1288400019
 Transform:
   m_ObjectHideFlags: 0
@@ -2778,11 +2775,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: World1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8789220129590599474, guid: 772d8afad9fd9434f99709b924906f09,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8789220129590599475, guid: 772d8afad9fd9434f99709b924906f09,
         type: 3}
@@ -3338,7 +3330,6 @@ MonoBehaviour:
   m_WorldInfo:
     Worldid: 2
     WorldName: "\uC6D4\uB4DC2"
-    WorldActivation: 0
     Wolrd_RandomChapter: 
     World_ChapterList: []
     World_RandomChapterList:
@@ -3486,7 +3477,6 @@ MonoBehaviour:
   m_WorldInfo:
     Worldid: 3
     WorldName: "\uC6D4\uB4DC3"
-    WorldActivation: 0
     Wolrd_RandomChapter: 
     World_ChapterList: []
     World_RandomChapterList:
@@ -3777,7 +3767,6 @@ MonoBehaviour:
   m_WorldInfo:
     Worldid: 4
     WorldName: "\uC6D4\uB4DC4"
-    WorldActivation: 0
     Wolrd_RandomChapter: 
     World_ChapterList: []
     World_RandomChapterList:

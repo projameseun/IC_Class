@@ -9,7 +9,6 @@ public class WorldManager : MonoBehaviour
     public List<WorldInfo> WorldList;
     public int SelectedWorldID = 0; //월드 클릭햇을때 저장
     public WorldInfo NowPlayWorld = new WorldInfo();  //진행중인월드
- 
 
     private void Start()
     {
