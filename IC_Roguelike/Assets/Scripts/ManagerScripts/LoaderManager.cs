@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-
+using System.Data.Common;
 
 [System.Serializable]//이거 반드시 쓸것
 public class Serialization<T>
@@ -24,10 +24,11 @@ public class LoaderManager : MonoBehaviour
     {
         
         myLoader += JsonWorldInfoLoad;
-        myLoader += JsonDiffcultyWeightLoad;
-        myLoader += JsonChapterInfoLoad;
-        myLoader += JsonStageInfoLoad;
+        //myLoader += JsonDiffcultyWeightLoad;
+        //myLoader += JsonChapterInfoLoad;
+        //myLoader += JsonStageInfoLoad;
         myLoader += PlayerPrefs_ChapterListLoad;
+     
 
 
     }
@@ -50,23 +51,31 @@ public class LoaderManager : MonoBehaviour
         List<WorldInfo> a_WorldList;
         a_WorldList = JsonUtility.FromJson<Serialization<WorldInfo>>(jdata).Sheet1;
 
+        //나중에 지울거 테스트
+       // Debug.Log(a_WorldList.Count);
+        //for(int i=0; i<a_WorldList.Count; i++)
+        //{
+        //    string[] datas = a_WorldList[i].World_ChapterList[i]
+        //}
+
+
         //여기서 데이터 처리
-        for (int i = 0; i < a_WorldList.Count; i++)
-        {
-            string[] datas = a_WorldList[i].Wolrd_RandomChapter.Split(',');
+        //for (int i = 0; i < a_WorldList.Count; i++)
+        //{
+        //    string[] datas = a_WorldList[i].Wolrd_RandomChapter.Split(',');
 
-            a_WorldList[i].World_RandomChapterList = new List<PercentInfo>();
+        //    a_WorldList[i].World_RandomChapterList = new List<PercentInfo>();
 
-            for (int j = 0; j < datas.Length; j++)
-            {
-                string[] Splits = datas[j].Split(':');
-                PercentInfo InsertData = new PercentInfo();
-                InsertData.ID = int.Parse(Splits[0]);
-                //InsertData.Percent = float.Parse(Splits[1]);
-                InsertData.Percent = int.Parse(Splits[1]);
-                a_WorldList[i].World_RandomChapterList.Add(InsertData);
-            }
-        }
+        //    for (int j = 0; j < datas.Length; j++)
+        //    {
+        //        string[] Splits = datas[j].Split(':');
+        //        PercentInfo InsertData = new PercentInfo();
+        //        InsertData.ID = int.Parse(Splits[0]);
+        //        //InsertData.Percent = float.Parse(Splits[1]);
+        //        InsertData.Percent = int.Parse(Splits[1]);
+        //        a_WorldList[i].World_RandomChapterList.Add(InsertData);
+        //    }
+        //}
         //여기서 게임매니저의 인스턴스의 월드매니저의 SetWorldList(a_LoadItemList)호출
         GameManager.instance.WdManager.SetWorldList(a_WorldList);
     }// private void JsonWorldInfoLoad()
@@ -138,16 +147,7 @@ public class LoaderManager : MonoBehaviour
             GameManager.instance.WdManager.SelectedWorldID = PlayerPrefs.GetInt("WorldID");
   
             GameManager.instance.WdManager.NowPlayWorld.ChapterProgress = PlayerPrefs.GetInt("ChpaterProgress");
-            if (PlayerPrefs.GetString("WorldSelect") == "true")
-            {
-                Debug.Log("해당월드가 존재합니다");
-                GameManager.instance.WdManager.NowPlayWorld.isChapter = true;
-            }
-            else
-            {
-                Debug.Log("해당월드 셀렉이 존재하지않습니다");
-                return;
-            }
+      
 
 
             GameManager.instance.WdManager.NowPlayWorld.Worldid = PlayerPrefs.GetInt("WorldID");
@@ -162,8 +162,13 @@ public class LoaderManager : MonoBehaviour
                
                 
             }
+            int Count = GameManager.instance.WdManager.SelectedWorldID- 1;
+           //랜덤챕터리스트 불러오는곳
+           for(int i=0; i<GameManager.instance.WdManager.WorldList[Count].World_RandomChapterList.Count; i++)
+            {
+                PlayerPrefs.GetString("RandomListComplete" + i, "true");
+            }
 
-           
         }//if (PlayerPrefs.HasKey("WorldID"))
     }// void PlayerPrefs_ChapterListLoad()
     #endregion PlayerPrefsLoad
@@ -171,9 +176,9 @@ public class LoaderManager : MonoBehaviour
 
     private void Start()
     {
-        //GameDataLoad();
-         PlayerPrefs_ChapterListLoad();
-        //myLoader();
+        GameDataLoad();
+         //PlayerPrefs_ChapterListLoad();
+        myLoader();
     }
 
     //추가 구현사항
