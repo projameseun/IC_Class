@@ -41,6 +41,12 @@ public class TestInfo : MonoBehaviour
                         PlayerPrefs.DeleteAll();
                     //월드세팅을 해준다
                 }
+
+
+                //int Chapteidx = GameManager.instance.WdManager.SelectedWorldID - 1;
+                ////월드리스트 저장하는곳
+                //GameManager.instance.WdManager.WorldList[Chapteidx].World_ChapterList[]
+                //GameManager.instance.SaveManager.mySave();
             });
         }
     }

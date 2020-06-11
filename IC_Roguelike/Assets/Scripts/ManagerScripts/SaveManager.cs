@@ -13,10 +13,12 @@ public class SaveManager : MonoBehaviour
 
     public void GameDataSave()
     {
+        mySave = null;
 
         mySave += JsonWorldListSave;
-        Debug.Log("저장들어가나요");
-  
+        Debug.Log("GameDataSave");
+
+      
     }
 
 

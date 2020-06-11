@@ -50,7 +50,7 @@ public class LobbyUIManager : MonoBehaviour
             //월드에1번은 무조건 활성화되어있다 
             WorldActivation[0].GetComponent<Image>().raycastTarget = true;
             WorldActivation[0].GetComponent<Image>().color = new Color32(255, 255, 255, 255);
-            Debug.Log("tset6번찍히면 정상");
+           // Debug.Log("tset6번찍히면 정상");
         }//  for (int i = 0; i < WorldActivation.Length; i++)
 
     }
@@ -61,7 +61,8 @@ public class LobbyUIManager : MonoBehaviour
         m_ChapterPanel.SetActive(true);
         //지금은 예시로 다섯개 지정해놨는데 나중에는 카운터만큼 들어가게한다 
         Debug.Log(GameManager.instance.WdManager.NowPlayWorld.World_ChapterList.Count);
-        for (int i = 0; i < 5; i++)
+        int Chapteidx = GameManager.instance.WdManager.SelectedWorldID - 1;
+        for (int i = 0; i<GameManager.instance.WdManager.WorldList[Chapteidx].World_ChapterList.Count; i++)
         {
             //1.프리팹 content생성 (Chpater)
             //2.Id값 넣어주기 
