@@ -1,9 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class SaveManager : MonoBehaviour
 {
+    //내부 delegate클래스
+    public delegate void AccountSave();
+    string FilePath;
+    public AccountSave mySave;
+    //모든 게임데이터 로드
+
+    public void GameDataSave()
+    {
+
+        mySave += JsonWorldListSave;
+        Debug.Log("저장들어가나요");
+  
+    }
+
+
+    private void JsonWorldListSave()
+    {
+        //string jdata = JsonUtility.ToJson(new PlayerInfoSerialization<PlayerInfo>(PlayerManager.instance.MyPlayerInfoList));
+        FilePath = Application.dataPath + "/StreamingAssets/DataTable/WorldInfo.json";
+        //리스트는 저장이 안되지만 크랠스는 저장이된다.
+        string jdata = JsonUtility.ToJson(new Serialization<WorldInfo>(GameManager.instance.WdManager.WorldList));
+        //byte[] bytes = System.Text.Encoding.UTF8.GetBytes(jdata);
+        File.WriteAllText(FilePath, jdata);
+        Debug.Log("저장완료");
+    }
+
     public void PlayerPrefs_WorldChapterListSave(List<ChapterInfo> a_ChapterList)
     {
         //월드를 누르고챕터가 생성되면 월드하나가 무조건 저장된다.
@@ -51,4 +78,6 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt("ChpaterProgress", GameManager.instance.WdManager.NowPlayWorld.ChapterProgress);
         PlayerPrefs.SetInt("WorldID", GameManager.instance.WdManager.SelectedWorldID);
     }
+
+   
 }

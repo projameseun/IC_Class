@@ -7,15 +7,19 @@ public class WorldInfo
 {
     public int Worldid;     //월드 id값
     public string WorldName;    //월드종류 이름값
+    public bool WorldActivation;    //월드활성화값
     public string Wolrd_RandomChapter;
 
 
-     public WorldInfo() { }
 
-    public WorldInfo(int worldid, string worldName, List<PercentInfo> world_RandomChapterList)
+    public WorldInfo() { }
+
+    public WorldInfo(int worldid, string worldName, bool WorldActivation ,List<PercentInfo> world_RandomChapterList)
     {
-        Worldid = worldid;
-        WorldName = worldName;
+        this.Worldid = worldid;
+        this.WorldName = worldName;
+        this.WorldActivation = WorldActivation;
+        
         //World_RandomChapterList = world_RandomChapterList;
     }
 

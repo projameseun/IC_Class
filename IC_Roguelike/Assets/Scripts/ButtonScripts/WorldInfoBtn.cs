@@ -13,8 +13,6 @@ public class WorldInfoBtn : MonoBehaviour
         #region WorldClick
         if (m_WorldBtn != null)
         {
-
-            
             m_WorldBtn.onClick.AddListener(() =>
             {
 
@@ -30,6 +28,7 @@ public class WorldInfoBtn : MonoBehaviour
                     GameManager.instance.WdManager.NowPlayWorld = m_WorldInfo;
                     GameManager.instance.WdManager.SelectedWorldID = m_WorldInfo.Worldid;
                     GameManager.instance.WdManager.NowPlayWorld.isChapter = true;
+                    GameManager.instance.WdManager.WorldList.Add(m_WorldInfo);  //이부분은 나중에 종민님이 넘겨준 json파일로할건데 지금은 PlayerPrefabs로
                     //처음 저장할대 제대로 로그찍히는지 보는곳
                     // 로그찍는곳 제대로 챕터리스트 들어갔는지 확인 나중에 지울 예정
                     //for (int i = 0; i < 5; i++)
@@ -44,7 +43,8 @@ public class WorldInfoBtn : MonoBehaviour
                 //처음세팅할때만 저장할때 키는곳
                 
                 GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave(GameManager.instance.WdManager.NowPlayWorld.World_ChapterList);
-
+               
+                GameManager.instance.SaveManager.GameDataSave();
                 //다섯개가 성성되고 챕터패널이 활성화되는곳
                 LobbyUIManager a_UIMager = FindObjectOfType<LobbyUIManager>();
                 a_UIMager.SettingWorld_ChpaterList();
@@ -84,10 +84,6 @@ public class WorldInfoBtn : MonoBehaviour
             }//for (int j = 0; j < World_RandomChapterList.Count; j++)
         }//for (int i = 0; i < World_RandomChapterList.Count; i++)
 
-        GameManager.instance.WdManager.NowPlayWorld = m_WorldInfo;
-
-
-
-        GameManager.instance.WdManager.SelectedWorldID = m_WorldInfo.Worldid;
+       
     }
 }
