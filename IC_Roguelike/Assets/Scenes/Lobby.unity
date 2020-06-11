@@ -2424,12 +2424,13 @@ MonoBehaviour:
   m_ChpaterPrefab: {fileID: 8077772212318585968, guid: 2a06a006db9d65d48969f387f5e229f5,
     type: 3}
   m_Dugeon: {fileID: 1311039654}
-  World1: {fileID: 1348972880}
-  World2: {fileID: 1810003373}
-  World3: {fileID: 1952951004}
-  World4: {fileID: 2131695631}
-  World5: {fileID: 180094352}
-  World6: {fileID: 1188155778}
+  WorldUIList:
+  - {fileID: 1348972880}
+  - {fileID: 1810003373}
+  - {fileID: 1952951004}
+  - {fileID: 2131695631}
+  - {fileID: 180094352}
+  - {fileID: 1188155778}
 --- !u!4 &1288400019
 Transform:
   m_ObjectHideFlags: 0

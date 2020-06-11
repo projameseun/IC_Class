@@ -18,7 +18,8 @@ public class ChapterInfoBtn : MonoBehaviour
             {
                 //현재진행중인챕터 저장 
                 //월드에 해당되는 챕터 저장 
-                GameManager.instance.SaveManager.PlayerPrefs_ChapterListSave();
+                // GameManager.instance.SaveManager.PlayerPrefs_ChapterListSave();
+                GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
                 int NowChapterCount = GameManager.instance.WdManager.NowPlayWorld.ChapterProgress;
                 GameManager.instance.ChaptManager.NowChapter = GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[NowChapterCount];
                 SceneManager.LoadScene("Ingame");

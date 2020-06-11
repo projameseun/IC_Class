@@ -143,6 +143,12 @@ public class LoaderManager : MonoBehaviour
                 Debug.Log("해당월드가 존재합니다");
                 GameManager.instance.WdManager.NowPlayWorld.isChapter = true;
             }
+            else if(PlayerPrefs.GetString("WorldSelect") == "false")    //다시챕터초기화시작
+            {
+                Debug.Log("flase로 들어왔습니다");
+                GameManager.instance.WdManager.NowPlayWorld.isChapter = false;
+                return;
+            }
             else
             {
                 Debug.Log("해당월드 셀렉이 존재하지않습니다");
@@ -151,8 +157,8 @@ public class LoaderManager : MonoBehaviour
 
 
             GameManager.instance.WdManager.NowPlayWorld.Worldid = PlayerPrefs.GetInt("WorldID");
-            
-            for (int i = 0; i < 5; i++)
+            int Count = PlayerPrefs.GetInt("ChapterCount");
+            for (int i = 0; i < Count; i++)
             {
                 ChapterInfo newNode = new ChapterInfo();
                 newNode.Chapterid = PlayerPrefs.GetInt("ChpaterID " + (i +1));

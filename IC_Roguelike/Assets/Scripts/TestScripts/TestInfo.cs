@@ -9,6 +9,8 @@ public class TestInfo : MonoBehaviour
     public Button ExitBtn;
     public Button ClearBtn;
 
+    public WorldInfoBtn m_WorldBtn = new WorldInfoBtn();
+
     private void Start()
     {
         if (ExitBtn != null)
@@ -16,8 +18,10 @@ public class TestInfo : MonoBehaviour
           
             ExitBtn.onClick.AddListener(() =>
             {
-                GameManager.instance.SaveManager.PlayerPrefs_ChapterListSave();
+                //GameManager.instance.SaveManager.PlayerPrefs_ChapterListSave();
+                GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
                 SceneManager.LoadScene("Lobby");
+               
             });
         }
 
@@ -27,20 +31,27 @@ public class TestInfo : MonoBehaviour
             ClearBtn.onClick.AddListener(() =>
             {
                 //1.챕터변경 
-                if(GameManager.instance.WdManager.NowPlayWorld.ChapterProgress < GameManager.instance.WdManager.NowPlayWorld.World_ChapterList.Count-1)
-                GameManager.instance.WdManager.NowPlayWorld.ChapterProgress++;
-                else
+
+              
+                    GameManager.instance.WdManager.NowPlayWorld.ChapterProgress++;
+                int NowChapterProgress = GameManager.instance.WdManager.NowPlayWorld.ChapterProgress;
+                
+              
+                    Debug.Log("챕터"+ NowChapterProgress.ToString()+"완료했습니다");
+                SceneManager.LoadScene("Lobby");
+                if (GameManager.instance.ChaptManager.ChapterList.Count == GameManager.instance.WdManager.NowPlayWorld.ChapterProgress)
                 {
-                    GameManager.instance.WdManager.NowPlayWorld.ChapterProgress = 0; //챕터프로그래스초기화
-                    GameManager.instance.WdManager.SelectedWorldID++;
-                    GameManager.instance.WdManager.NowPlayWorld.isChapter = false;
-                    GameManager.instance.SaveManager.PlayerPrefs_ChapterClear();
-                    SceneManager.LoadScene("Lobby");
                     Debug.Log("챕터를 모두 완료했습니다");
-                    if (GameManager.instance.WdManager.SelectedWorldID >= 5)
-                        PlayerPrefs.DeleteAll();
-                    //월드세팅을 해준다
+                    GameManager.instance.WdManager.SelectedWorldID++ ;   //다음월드진행
+                    GameManager.instance.WdManager.NowPlayWorld.ChapterProgress = 0;
+                    GameManager.instance.WdManager.NowPlayWorld.isChapter = false;
+
+                   GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
+                    SceneManager.LoadScene("Lobby");
                 }
+                   
+                    //월드세팅을 해준다
+                
             });
         }
     }

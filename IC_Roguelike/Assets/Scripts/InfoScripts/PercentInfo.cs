@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-
+using System.Data.Common;
 
 [System.Serializable]
 public class PercentInfo //: MonoBehaviour 
@@ -12,24 +12,19 @@ public class PercentInfo //: MonoBehaviour
     public int ID;
     public float Percent;
     private bool is_Complete = false;
-
+    
     static public int RandomSelcet(List<PercentInfo> a_RandomList)
     {
         int a_WorldListCount = a_RandomList.Count;
         //Debug.Log(a_WorldListCount);
 
-        float PercentBool = 0;
-        for (int i = 0; i < a_RandomList.Count; i++)
-        {
-            PercentBool += a_RandomList[i].Percent;
-        }// for(int i=0; i<World_RandomChapterList.Count; i++)
+        //float PercentBool = 0;
+        //for (int i = 0; i < a_RandomList.Count; i++)
+        //{
+        //    PercentBool += a_RandomList[i].Percent;
+        //}// for(int i=0; i<World_RandomChapterList.Count; i++)
 
-        //랜덤챕터리스트가 100퍼센트가 아니면 생성안함
-        if (PercentBool != 100.0f)
-        {
-            Debug.Log("Not 100%" + PercentBool);
-            return 0;
-        }// if(PercentBool != 100.0f)
+        
 
         //랜덤챕터리스트가 100퍼센트일때 만 들어옴
 
@@ -37,23 +32,73 @@ public class PercentInfo //: MonoBehaviour
         //float Calc = 0.0f;
         float CompareResult = 0.0f;
 
+        float PercentBool = 0.0f;
+
+        for(int i=0; i<GameManager.instance.WdManager.NowPlayWorld.World_ChapterList.Count; i++)
+        {
+            //Debug.Log(GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[i].Chapterid);
+        }
+
+        if (GameManager.instance.WdManager.NowPlayWorld.isChapter == false)
+        {
+            //Debug.Log("설마여기");
+            for (int i = 0; i < a_RandomList.Count; i++)
+            {
+                PercentBool += a_RandomList[i].Percent;
+            }
+        }
+        else if(GameManager.instance.WdManager.NowPlayWorld.isChapter == true)
+        {
+           
+            for (int i = 0; i < GameManager.instance.WdManager.NowPlayWorld.World_ChapterList.Count; i++)
+            {
+                for (int j = 0; j < a_RandomList.Count; j++)
+                {
+                    if (GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[i].Chapterid == a_RandomList[j].ID)
+                    {
+                        a_RandomList.RemoveAt(j);
+
+                    }
+                }
+            }
+
+
+            int a_Count = a_RandomList.Count;
+            Debug.Log(a_Count);
+          
+            for (int i = 0; i < a_Count; i++)
+            {   
+               
+                PercentBool += a_RandomList[i].Percent;
+            }
+
+           // Debug.Log(PercentBool + "확인");
+        }
+        
+       
         for (int i = 0; i < a_WorldListCount; i++)
         {
+          
 
-            float rand = Random.Range(0.0f, 100.0f);
+                float rand = Random.Range(0.0f, PercentBool);
             //Debug.Log("rand" + rand);
             CompareResult += a_RandomList[i].Percent;
 
             if (rand <= CompareResult)
             {
+
                 //이때넣어준다
-                ResultSel = i + 1;
-                //Debug.Log("Result:" + ResultSel);
+                ResultSel = a_RandomList[i].ID;
+                Debug.Log("Result:" + ResultSel);
 
                 return ResultSel;
+               
             }//if (rand <=CompareResult )
 
+           
+
         }// for (int i = 0; i < a_WorldListCount; i++)
+       
         return ResultSel;
 
     }//public int  RandomSelcet()
