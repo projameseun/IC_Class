@@ -155,6 +155,24 @@ public class LoaderManager : MonoBehaviour
                 return;
             }
 
+            if (PlayerPrefs.GetString("ExitChapter") == "true")
+            {
+                Debug.Log("ExitTrue");
+                GameManager.instance.WdManager.NowPlayWorld.ExitChapter = true;
+            }
+            else
+            {
+                Debug.Log("ExitFalse");
+                GameManager.instance.WdManager.NowPlayWorld.ExitChapter = false;
+            }
+            if (PlayerPrefs.GetString("WorldClear") == "true")
+            {
+                GameManager.instance.WdManager.NowPlayWorld.isWorldClear = true;
+            }
+            else
+                GameManager.instance.WdManager.NowPlayWorld.isWorldClear = false;
+
+
 
             GameManager.instance.WdManager.NowPlayWorld.Worldid = PlayerPrefs.GetInt("WorldID");
             int Count = PlayerPrefs.GetInt("ChapterCount");

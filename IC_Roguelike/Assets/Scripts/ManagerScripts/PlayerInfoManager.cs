@@ -7,7 +7,7 @@ public class PlayerInfoManager : MonoBehaviour
 {
     public PlayerCtrl Player = null;
     //추후 개발 예정 2020 05 25 
-
+    
     private void Update()
     {
         //------------------- 마우스 이동 코드

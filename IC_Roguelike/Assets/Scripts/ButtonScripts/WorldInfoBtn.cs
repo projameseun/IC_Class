@@ -24,13 +24,20 @@ public class WorldInfoBtn : MonoBehaviour
                 //2.퍼센트에 따라서 조건이 나올확률이다.
                 if (GameManager.instance.WdManager.NowPlayWorld.isChapter == false) //챕터가 만약에 저장된게없다면 들어오게됨
                 {
+                   
                     RandomSetting();
-                    if (GameManager.instance.WdManager.SelectedWorldID > m_WorldInfo.Worldid)
+                    if (GameManager.instance.WdManager.NowPlayWorld.isWorldClear == false)
                         GameManager.instance.WdManager.SelectedWorldID = m_WorldInfo.Worldid;
-                    else
-                    {
-                        GameManager.instance.WdManager.SelectedWorldID = m_WorldInfo.Worldid;
-                    }
+                    //if (GameManager.instance.WdManager.SelectedWorldID > m_WorldInfo.Worldid)
+                    //{
+                    //    if (GameManager.instance.WdManager.NowPlayWorld.isWorldClear == false) 
+                    //    GameManager.instance.WdManager.SelectedWorldID = m_WorldInfo.Worldid;
+                    //}
+                    //else
+                    //{
+                    //    if (GameManager.instance.WdManager.NowPlayWorld.isWorldClear == false)
+                    //        GameManager.instance.WdManager.SelectedWorldID = m_WorldInfo.Worldid;
+                    //}
 
                     GameManager.instance.WdManager.NowPlayWorld.isChapter = true;
 
@@ -38,6 +45,7 @@ public class WorldInfoBtn : MonoBehaviour
                 }//     if (GameManager.instance.WdManager.NowPlayWorld.isChapter == false)
                else
                 {
+                    if(GameManager.instance.WdManager.NowPlayWorld.ExitChapter != true)
                     RandomSetting();
 
                   

@@ -9,15 +9,26 @@ public class SaveManager : MonoBehaviour
         //월드를 누르고챕터가 생성되면 월드하나가 무조건 저장된다.
         // bool isActive = true;
         if (GameManager.instance.WdManager.NowPlayWorld.isChapter == true)
-        {
-            //진행중인 월드가없을때 들어간다
+             //진행중인 월드가없을때 들어간다
             PlayerPrefs.SetString("WorldSelect", "true");   //
-        }
         else
-        {
+        
             PlayerPrefs.SetString("WorldSelect", "false");   //
-        }
+        
+        if(GameManager.instance.WdManager.NowPlayWorld.ExitChapter == true)
+             PlayerPrefs.SetString("ExitChapter", "true"); 
+        else
     
+            PlayerPrefs.SetString("ExitChapter", "false");
+       
+        if (GameManager.instance.WdManager.NowPlayWorld.isWorldClear == true)
+        
+            PlayerPrefs.SetString("WorldClear", "true");
+        
+        else               
+            PlayerPrefs.SetString("WorldClear", "false");
+            
+       
           
         PlayerPrefs.SetInt("WorldID", GameManager.instance.WdManager.SelectedWorldID);
         PlayerPrefs.SetInt("ChpaterProgress", GameManager.instance.WdManager.NowPlayWorld.ChapterProgress);
@@ -45,17 +56,12 @@ public class SaveManager : MonoBehaviour
         //PlayerPrefs.DeleteAll();
     }
 
-    //public void PlayerPrefs_ChapterListSave()
-    //{
-    //    //처음세팅할때만 월드새로될때만
-    //    if (GameManager.instance.WdManager.SelectedWorldID == 0)
-    //        GameManager.instance.WdManager.NowPlayWorld.ChapterProgress = 0;//처음에는 첫번째
-        
-    //    //현재월드에 저장된챕터
-    //    PlayerPrefs.SetInt("ChpaterProgress", GameManager.instance.WdManager.NowPlayWorld.ChapterProgress);
-    //    PlayerPrefs.SetInt("WorldID", GameManager.instance.WdManager.SelectedWorldID);
-   
-    //}
+    //임시함수 나가기버튼눌럿을대
+   public void PlayerPrefs_ExitChapter()
+    {
+        //여기있는건다임시임
+        PlayerPrefs.SetString("ExitChapter", "true");
+    }
 
     public void PlayerPrefs_ChapterClear()
     {

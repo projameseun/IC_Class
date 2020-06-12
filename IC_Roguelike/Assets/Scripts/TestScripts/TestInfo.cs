@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class TestInfo : MonoBehaviour
 {
     public Text NowChapterTxt;
+    public Text NowWorldTxt;    //진행중인월드
+    public Text SelectWorldTxt;
     public Button ExitBtn;
     public Button ClearBtn;
 
@@ -19,6 +21,7 @@ public class TestInfo : MonoBehaviour
             ExitBtn.onClick.AddListener(() =>
             {
                 //GameManager.instance.SaveManager.PlayerPrefs_ChapterListSave();
+                GameManager.instance.WdManager.NowPlayWorld.ExitChapter = true;
                 GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
                 SceneManager.LoadScene("Lobby");
                
@@ -35,9 +38,10 @@ public class TestInfo : MonoBehaviour
               
                     GameManager.instance.WdManager.NowPlayWorld.ChapterProgress++;
                 int NowChapterProgress = GameManager.instance.WdManager.NowPlayWorld.ChapterProgress;
-                
-              
-                    Debug.Log("챕터"+ NowChapterProgress.ToString()+"완료했습니다");
+                GameManager.instance.WdManager.NowPlayWorld.ExitChapter = false;
+
+                Debug.Log("챕터"+ NowChapterProgress.ToString()+"완료했습니다");
+
                 SceneManager.LoadScene("Lobby");
                 if (GameManager.instance.ChaptManager.ChapterList.Count == GameManager.instance.WdManager.NowPlayWorld.ChapterProgress)
                 {
@@ -45,8 +49,10 @@ public class TestInfo : MonoBehaviour
                     GameManager.instance.WdManager.SelectedWorldID++ ;   //다음월드진행
                     GameManager.instance.WdManager.NowPlayWorld.ChapterProgress = 0;
                     GameManager.instance.WdManager.NowPlayWorld.isChapter = false;
+                    GameManager.instance.WdManager.NowPlayWorld.ExitChapter = false;
+                    GameManager.instance.WdManager.NowPlayWorld.isWorldClear = true;
 
-                   GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
+                    GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
                     SceneManager.LoadScene("Lobby");
                 }
                    
@@ -59,5 +65,7 @@ public class TestInfo : MonoBehaviour
     private void Update()
     {
         NowChapterTxt.text = "현재진행중인 챕터ID:" + GameManager.instance.WdManager.NowPlayWorld.ChapterProgress.ToString();
+        NowWorldTxt.text = "현재진행중인 월드ID:" + GameManager.instance.WdManager.SelectedWorldID.ToString();
+        SelectWorldTxt.text = "내가선택한 월드ID:" + GameManager.instance.WdManager.SelectedWorldID.ToString();
     }
 }
