@@ -47,8 +47,12 @@ public class Monster : Character
 
     void Update()
     {
+<<<<<<< HEAD
         FindViewTargets();
         TracePlayer();
+=======
+        LostPlayer();
+>>>>>>> parent of f864058... 수정1
     }
 
     // 씬 테스트용 기즈모 그리기
@@ -70,7 +74,7 @@ public class Monster : Character
             Debug.DrawRay(originPos, lookDir * viewDistance, Color.green);
             Debug.DrawRay(originPos, horizontalRightDir * viewDistance, Color.cyan);
 
-            //FindViewTargets();
+            FindViewTargets();
         }
     }
 
@@ -95,17 +99,17 @@ public class Monster : Character
 
             if (angle <= viewHalfAngle)
             {
-                RaycastHit2D rayHitedObstacle = Physics2D.Raycast(originPos, dir, viewDistance, viewObstacleMask);
-                RaycastHit2D rayHitedPlayer = Physics2D.Raycast(originPos, dir, viewDistance, viewTargetMask);
-                if (rayHitedObstacle)
+                RaycastHit2D rayHitedTarget = Physics2D.Raycast(originPos, dir, viewDistance, viewObstacleMask);
+
+                if (rayHitedTarget)
                 {
                     //LostPlayer();
                     isTrace = true;
 
                     if (bDebugMode)
-                        Debug.DrawLine(originPos, rayHitedObstacle.point, Color.yellow);
+                        Debug.DrawLine(originPos, rayHitedTarget.point, Color.yellow);
                 }
-                else if (rayHitedPlayer) 
+                else
                 {
                     hitedTargetContainer.Add(hitedTarget);
 
@@ -114,11 +118,18 @@ public class Monster : Character
                     if (bDebugMode)
                         Debug.DrawLine(originPos, targetPos, Color.red);
                 }
+<<<<<<< HEAD
                 else
                 {
                     LostPlayer();
                     //Debug.Log(isTrace);
                 }
+=======
+            }
+            else
+            {
+                isTrace = false;
+>>>>>>> parent of f864058... 수정1
             }
 
             if (Vector3.Distance(traceTarget.position, transform.position) < 0.7f)
