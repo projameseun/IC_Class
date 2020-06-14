@@ -4,6 +4,7 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 <<<<<<< HEAD
+<<<<<<< HEAD
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -365,5 +366,7 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 =======
 >>>>>>> parent of f864058... 수정1
+=======
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성

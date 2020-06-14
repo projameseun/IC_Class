@@ -51,10 +51,13 @@ public class Monster : Character
 <<<<<<< HEAD
         FindViewTargets();
 <<<<<<< HEAD
+<<<<<<< HEAD
         TracePlayer();
 =======
         LostPlayer();
 >>>>>>> parent of f864058... 수정1
+=======
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
     }
@@ -126,11 +129,14 @@ public class Monster : Character
                 }
 =======
             }
+<<<<<<< HEAD
             else
             {
                 isTrace = false;
 >>>>>>> parent of f864058... 수정1
             }
+=======
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
         }
 
         if (hitedTargetContainer.Count > 0)
