@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerCharacter : Character
 {
-    
     private float superGauge;   // 스킬게이지
 
     private int equipWeaponId;      // 착용중인 무기 id
@@ -12,10 +11,9 @@ public class PlayerCharacter : Character
 
     private Animator anim;                  // Animator를 불러오기 위한 변수
     private AnimationController animCtrl;   // AnimationController를 불러오기 위한 변수
-    private TouchPanel touchPanel;
 
     private Vector2 lastMove;       // 마지막 움직임이 어느 방향이었는지 확인하기 위한 변수
-    private bool isMove = false;    // 플레이어가 움직이는지 확인
+    private bool isMove;    // 플레이어가 움직이는지 확인
 
     private float h, v;
     Vector3 moveNextStep;   // 이동속도 계산을 위한 변수
@@ -26,29 +24,20 @@ public class PlayerCharacter : Character
     {
         anim = GetComponent<Animator>();    // 애니메이터 불러오기
         animCtrl = GetComponent<AnimationController>(); // 애니메이션컨트롤 불러오기
-        touchPanel = FindObjectOfType<TouchPanel>();
+
         // 이동속도
         this.spd = 2f;
     }
 
     void Update()
     {
-        // 플레이어 스와이프 이동
-        touchPanel.SwipeMove(transform, this.spd);
-        // 플레이어 스와이프 애니메이션
-        animCtrl.PlayerSwipeAimCtrl(anim, lastMove, isMove, touchPanel);
-
         // 플레이어 이동
-        //Move();
+        Move();
         // 플레이어 이동 애니메이션
-        //animCtrl.PlayerAnimCtrl(anim, lastMove, isMove);
-        
-
+        animCtrl.PlayerAnimCtrl(anim, lastMove, isMove);
     }
 
-
-    // 키보드 조작 이동
-    private void Move()
+    void Move()
     {
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");

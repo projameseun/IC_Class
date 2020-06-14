@@ -19,7 +19,7 @@ public class Monster : Character
     [SerializeField] private float viewDistance = 1f; // 시야 거리
     [Range(-180f, 180f)]
     [SerializeField] private float viewRotate = 0f; // 시야각의 회전값
-    private float rotateSpeed = 1f; // 시야각의 회전속도
+    [SerializeField] private float rotateSpeed = 2f; // 시야각의 회전속도
 
     [SerializeField] private LayerMask viewTargetMask;       // 인식 가능한 타켓의 마스크
     [SerializeField] private LayerMask viewObstacleMask;     // 인식 방해물의 마스크 
@@ -28,6 +28,7 @@ public class Monster : Character
     private List<Collider2D> hitedTargetContainer = new List<Collider2D>(); // 인식한 물체들을 보관할 컨테이너
 
     private float viewHalfAngle = 0f; // 시야각의 절반 값
+
     private Transform traceTarget;  // 추적대상위치
     private Animator anim;          // 애니메이션
     private bool isTrace = false;    // 추적중인가?
@@ -49,13 +50,15 @@ public class Monster : Character
     {
 <<<<<<< HEAD
         FindViewTargets();
+<<<<<<< HEAD
         TracePlayer();
 =======
         LostPlayer();
 >>>>>>> parent of f864058... 수정1
+=======
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
     }
 
-    // 씬 테스트용 기즈모 그리기
     private void OnDrawGizmosSelected()
     {
         if (bDebugMode)
@@ -78,7 +81,6 @@ public class Monster : Character
         }
     }
 
-    // 플레이어 찾기
     public Collider2D[] FindViewTargets()
     {
         hitedTargetContainer.Clear();
@@ -103,8 +105,7 @@ public class Monster : Character
 
                 if (rayHitedTarget)
                 {
-                    //LostPlayer();
-                    isTrace = true;
+                    LostPlayer();
 
                     if (bDebugMode)
                         Debug.DrawLine(originPos, rayHitedTarget.point, Color.yellow);
@@ -112,8 +113,8 @@ public class Monster : Character
                 else
                 {
                     hitedTargetContainer.Add(hitedTarget);
-
-                    isTrace = true;
+                    
+                    TracePlayer();
 
                     if (bDebugMode)
                         Debug.DrawLine(originPos, targetPos, Color.red);
@@ -122,7 +123,6 @@ public class Monster : Character
                 else
                 {
                     LostPlayer();
-                    //Debug.Log(isTrace);
                 }
 =======
             }
@@ -130,12 +130,6 @@ public class Monster : Character
             {
                 isTrace = false;
 >>>>>>> parent of f864058... 수정1
-            }
-
-            if (Vector3.Distance(traceTarget.position, transform.position) < 0.7f)
-            {
-                LookPlayer();
-                
             }
         }
 
@@ -163,40 +157,30 @@ public class Monster : Character
     // 플레이어 따라가기
     private void TracePlayer()
     {
-        if (isTrace)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, traceTarget.transform.position, spd * Time.deltaTime);
-            LookPlayer();
-
-            anim.SetBool("IsMove", true);
-            anim.SetFloat("MoveX", (traceTarget.position.x - transform.position.x));
-            anim.SetFloat("MoveY", (traceTarget.position.y - transform.position.y));
-            anim.SetFloat("LastMoveX", (traceTarget.position.x - transform.position.x)); // LastMoveX를 lastMove의 X값과 같게 설정
-            anim.SetFloat("LastMoveY", (traceTarget.position.y - transform.position.y)); // LastMoveY를 lastMove의 y값과 같게 설정
-        }
-        else
-            LostPlayer();
-    }
-
-    // 플레이어 놓침
-    private void LostPlayer()
-    {
-        float targetDistance = Vector3.Distance(traceTarget.position, transform.position);
-        anim.SetBool("IsMove", false);
-        if (targetDistance > viewDistance)
-        {
-            isTrace = false;
-        }
-    }
-
-    // 플레이어 바라보기
-    private void LookPlayer()
-    {
+        isTrace = true;
+        transform.position = Vector3.MoveTowards(transform.position, traceTarget.transform.position, spd * Time.deltaTime);
         if (isTrace)
         {
             float angular = -(GetAngle(traceTarget.position, transform.position) - 180);
             viewRotate = Mathf.Lerp(viewRotate, angular, rotateSpeed);
             //Debug.Log(angular);
+        }
+
+        anim.SetBool("IsMove", true);
+        anim.SetFloat("MoveX", (traceTarget.position.x - transform.position.x));
+        anim.SetFloat("MoveY", (traceTarget.position.y - transform.position.y));
+        anim.SetFloat("LastMoveX", (traceTarget.position.x - transform.position.x)); // LastMoveX를 lastMove의 X값과 같게 설정
+        anim.SetFloat("LastMoveY", (traceTarget.position.y - transform.position.y)); // LastMoveY를 lastMove의 y값과 같게 설정
+        
+    }
+
+    // 플레이어 놓침
+    private void LostPlayer()
+    {
+        anim.SetBool("IsMove", false);
+        if (Vector3.Distance(traceTarget.position, transform.position) > viewDistance)
+        {
+            isTrace = false;
         }
     }
 }
