@@ -27,8 +27,11 @@ public class SaveManager : MonoBehaviour
         
         else               
             PlayerPrefs.SetString("WorldClear", "false");
-            
-       
+
+        if (GameManager.instance.WdManager.NowPlayWorld.isChapterClear == true)
+            PlayerPrefs.SetString("ChapterClear", "true");
+        else
+            PlayerPrefs.SetString("ChapterClear", "false");
           
         PlayerPrefs.SetInt("WorldID", GameManager.instance.WdManager.SelectedWorldID);
         PlayerPrefs.SetInt("ChpaterProgress", GameManager.instance.WdManager.NowPlayWorld.ChapterProgress);
@@ -44,6 +47,20 @@ public class SaveManager : MonoBehaviour
                 PlayerPrefs.SetInt(Savedata2, GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[i].Chapterid);
 
             }
+
+            //일단은랜덥챕터리스트저장
+            PlayerPrefs.SetInt("ChapterRandomCount", GameManager.instance.WdManager.NowPlayWorld.World_RandomChapterList.Count);
+            for (int i = 0; i < GameManager.instance.WdManager.NowPlayWorld.World_RandomChapterList.Count; i++)
+            {
+                string Savedata = "ChapterRandomName " + (i + 1);
+                PlayerPrefs.SetInt(Savedata, GameManager.instance.WdManager.NowPlayWorld.World_RandomChapterList[i].ID);
+                string Savedata2 = "ChpaterRandomPercent " + (i + 1);
+                PlayerPrefs.SetFloat(Savedata2, GameManager.instance.WdManager.NowPlayWorld.World_RandomChapterList[i].Percent);
+                Debug.Log(Savedata);
+                Debug.Log(Savedata2);
+            }
+            //일단은랜덥챕터리스트저장
+          
         }
         else
         {

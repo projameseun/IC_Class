@@ -1,19 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class ChapterManager : MonoBehaviour
 {
     public ChapterInfo NowChapter;
     public List<ChapterInfo> ChapterList = new List<ChapterInfo>();
-    
+    public StageInfo NowPlayStage = new StageInfo();  //진행중인월드
     //임시테스트용이다 지금은 json이없어서
     private void Start()
     {
 
-        //처음설정할때만 
+        //처음설정할때만 프리셋받으면그걸로할예정
         for (int i = 0; i < 5; i++)
         {
 

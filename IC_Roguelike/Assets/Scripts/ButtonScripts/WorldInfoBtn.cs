@@ -17,14 +17,14 @@ public class WorldInfoBtn : MonoBehaviour
             
             m_WorldBtn.onClick.AddListener(() =>
             {
-                
+                GameManager.instance.WdManager.NowPlayWorld = m_WorldInfo;
                 Debug.Log("WorldClick");
                 //GameManager.instance.WdManager.NowPlayWorld = this.GetComponent<WorldInfo>();
                 //1.랜덤으로 World_RandomChpaterList를 돌린다 
                 //2.퍼센트에 따라서 조건이 나올확률이다.
                 if (GameManager.instance.WdManager.NowPlayWorld.isChapter == false) //챕터가 만약에 저장된게없다면 들어오게됨
                 {
-                   
+                
                     RandomSetting();
                     if (GameManager.instance.WdManager.NowPlayWorld.isWorldClear == false)
                         GameManager.instance.WdManager.SelectedWorldID = m_WorldInfo.Worldid;
@@ -40,7 +40,7 @@ public class WorldInfoBtn : MonoBehaviour
                     //}
 
                     GameManager.instance.WdManager.NowPlayWorld.isChapter = true;
-
+                    
 
                 }//     if (GameManager.instance.WdManager.NowPlayWorld.isChapter == false)
                else
@@ -77,10 +77,10 @@ public class WorldInfoBtn : MonoBehaviour
         
     }
 
-    void RandomSetting()
+    public void RandomSetting()
     {
-       
-            int ChapterId = PercentInfo.RandomSelcet(m_WorldInfo.World_RandomChapterList);  //랜덤챕터리스트
+            
+            int ChapterId = PercentInfo.RandomSelcet(GameManager.instance.WdManager.NowPlayWorld.World_RandomChapterList);  //랜덤챕터리스트
         //Debug.Log(ChapterId);
             for (int j = 0; j < GameManager.instance.ChaptManager.ChapterList.Count; j++)
             {

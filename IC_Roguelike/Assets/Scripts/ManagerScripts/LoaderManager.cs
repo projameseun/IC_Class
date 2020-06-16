@@ -172,6 +172,16 @@ public class LoaderManager : MonoBehaviour
             else
                 GameManager.instance.WdManager.NowPlayWorld.isWorldClear = false;
 
+      
+  
+
+            if (PlayerPrefs.GetString("ChapterClear") == "true")
+            {
+                GameManager.instance.WdManager.NowPlayWorld.isChapterClear = true;
+            }
+            else
+                GameManager.instance.WdManager.NowPlayWorld.isChapterClear = false;
+
 
 
             GameManager.instance.WdManager.NowPlayWorld.Worldid = PlayerPrefs.GetInt("WorldID");
@@ -186,8 +196,22 @@ public class LoaderManager : MonoBehaviour
                
                 
             }
-
            
+        int Count2 = PlayerPrefs.GetInt("ChapterRandomCount");
+
+            for (int i = 0; i < Count2; i++)
+            {
+                PercentInfo newNode = new PercentInfo();
+                newNode.ID = PlayerPrefs.GetInt("ChapterRandomName " + (i + 1));
+                newNode.Percent = PlayerPrefs.GetFloat("ChpaterRandomPercent " + (i + 1));
+                GameManager.instance.WdManager.NowPlayWorld.World_RandomChapterList.Add(newNode);
+               
+
+            }
+            //일단은랜덥챕터리스트저장
+
+
+
         }//if (PlayerPrefs.HasKey("WorldID"))
     }// void PlayerPrefs_ChapterListLoad()
     #endregion PlayerPrefsLoad

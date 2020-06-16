@@ -37,4 +37,5 @@ public class WorldInfo
     public int EndChapter;  //마지막챕터장 나중에할거 
     public bool isChapter;
     public bool isWorldClear;    //이미클리어되었는가
+    public bool isChapterClear; //챕터를 깨고나왓다면
 }

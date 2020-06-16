@@ -46,6 +46,8 @@ public class PlayerCtrl : MonoBehaviour
     //test rigi
     public Rigidbody2D rb;
 
+    static public int PlayerHp = 5;
+
     private void Start()
     {
         this.gameObject.GetComponent<SpriteRenderer>().sprite = m_HeroSprite[(int)PlayerAni.Idle];
@@ -129,7 +131,11 @@ public class PlayerCtrl : MonoBehaviour
         {
             GameManager.instance.LobbyUIManger.m_Dugeon.SetActive(true);
             WorldInfoBtn a_Object = new WorldInfoBtn();
-            a_Object.TestWorld();
+            if (GameManager.instance.WdManager.NowPlayWorld.isChapter == false)
+                a_Object.TestWorld();
+            else
+                //진행중인 월드에 챕터가 있다면 월드는 보여주지않는다 이때 재개화면 나오게하기 
+                GameManager.instance.LobbyUIManger.m_ResumePanel.SetActive(true);
             //GameManager.instance.LobbyUIManger.SettingWorld_WorldList();
         }
            // SceneManager.LoadScene("Lobby");

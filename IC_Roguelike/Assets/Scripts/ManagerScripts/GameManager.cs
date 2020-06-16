@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
             InitBtn.onClick.AddListener(() =>
             {
                 PlayerPrefs.DeleteAll();
+                
+
             });
         }
     }

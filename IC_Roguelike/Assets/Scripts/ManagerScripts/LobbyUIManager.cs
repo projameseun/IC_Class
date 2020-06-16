@@ -1,25 +1,77 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class LobbyUIManager : MonoBehaviour
 {
     public GameObject m_ChapterPanel;
     public ScrollRect m_ChapterScroll;
     public GameObject m_ChpaterPrefab;
+    public GameObject m_ResumePanel;
    // public GameObject m_WorldPrefab;
     public GameObject m_Dugeon;
 
     [Header("테스트하는곳")]
     public GameObject[] WorldUIList;
 
+    [Header("재개화면 UI")]
+    public Button EnterBtn;
+    public Button GiveUpBtn;
+    public Text NowWorldID;
+    public Text NowChapterID;
+    public Text PlayerHp;
+
     private void Start()
     {
         GameManager.instance.LobbyUIManger = this;
         m_ChapterPanel.SetActive(false);
+
+        if(EnterBtn != null)
+        {
+           
+           EnterBtn.onClick.AddListener(()=>
+           {
+               Debug.Log("입장");
+               //현재진행중인챕터 저장 
+               //월드에 해당되는 챕터 저장 
+               // GameManager.instance.SaveManager.PlayerPrefs_ChapterListSave();
+               GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
+               SceneManager.LoadScene("Ingame");
+
+           });
+        }
+
+        if(GiveUpBtn != null)
+        {
+            GiveUpBtn.onClick.AddListener(() =>
+            {
+                Debug.Log("포기");
+                
+
+            });
+        }
+
+        if (GameManager.instance.WdManager.NowPlayWorld.isChapterClear == true && GameManager.instance.WdManager.NowPlayWorld.ExitChapter== false)
+        {
+            WorldInfoBtn a_Object = new WorldInfoBtn();
+            GameManager.instance.LobbyUIManger.m_Dugeon.SetActive(true);
+         
+           
+                a_Object.RandomSetting();
+
+            SettingWorld_ChpaterList();
+            Debug.Log("테스트중입니다");
+        }
+    }
+
+    private void Update()
+    {
+        PlayerHp.text = "플레이어목숨:" + PlayerCtrl.PlayerHp.ToString();
+        NowChapterID.text = "현재진행중인 챕터ID:" + GameManager.instance.WdManager.NowPlayWorld.ChapterProgress.ToString();
+        NowWorldID.text = "현재진행중인 월드ID:" + GameManager.instance.WdManager.SelectedWorldID.ToString();
+        //SelectWorldTxt.text = "내가선택한 월드ID:" + GameManager.instance.WdManager.SelectedWorldID.ToString();
     }
 
     public void SettingWorld_WorldList()
@@ -83,8 +135,8 @@ public class LobbyUIManager : MonoBehaviour
         }
 
 
-
-
-
+     
     }
+
+   
 }

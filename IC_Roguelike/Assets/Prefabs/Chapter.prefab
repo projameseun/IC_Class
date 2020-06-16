@@ -205,5 +205,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ChapterBtn: {fileID: 8077772212318585970}
+  m_ChapterInfo:
+    Chapterid: 0
+    ChapterName: 
+    Chapter_StageList: []
+    Chapter_MapList:
+    - ID: 1
+      Percent: 2
+    - ID: 2
+      Percent: 20
+    - ID: 3
+      Percent: 25
+    - ID: 4
+      Percent: 30
+    - ID: 5
+      Percent: 47
+    - ID: 6
+      Percent: 55
+    - ID: 7
+      Percent: 80
+    - ID: 8
+      Percent: 80
+    - ID: 9
+      Percent: 110
+    - ID: 10
+      Percent: 120
+    Chapter_MonsterList: []
+    Chapter_ObjectList: []
+    maxObjAmount: 0
+    diffcultyMode: 
+    IsClear: 0
   m_Text: {fileID: 8077772211781362443}
-  m_Image: {fileID: 8077772212318585971}
+  Count: 0
