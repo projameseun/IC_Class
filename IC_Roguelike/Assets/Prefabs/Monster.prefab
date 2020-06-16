@@ -139,7 +139,8 @@ MonoBehaviour:
   viewObstacleMask:
     serializedVersion: 2
     m_Bits: 1024
-  collisionRadius: 0.25
+  traceTarget: {fileID: 8550887573295576251, guid: 638bfefc11195b44a9ce594f72c65dc1,
+    type: 3}
 --- !u!58 &175032282
 CircleCollider2D:
   m_ObjectHideFlags: 0
