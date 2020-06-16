@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ButtonScripts\ChapterInfoBtn.cs" />
     <Compile Include="Assets\Scripts\ButtonScripts\WorldInfoBtn.cs" />
     <Compile Include="Assets\Scripts\CtrollerScripts\AnimationController.cs" />
     <Compile Include="Assets\Scripts\CtrollerScripts\CameraCtrl.cs" />

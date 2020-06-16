@@ -131,14 +131,31 @@ public class PlayerCtrl : MonoBehaviour
         {
             GameManager.instance.LobbyUIManger.m_Dugeon.SetActive(true);
             WorldInfoBtn a_Object = new WorldInfoBtn();
+            //재개화면
+            //if (GameManager.instance.WdManager.NowPlayWorld.ExitChapter == true)
+            //{
+            //    GameManager.instance.LobbyUIManger.m_ResumePanel.SetActive(true);
+            //    return;
+            //}
+            if(GameManager.instance.WdManager.NowPlayWorld.ExitChapter == true)
+            {
+                GameManager.instance.LobbyUIManger.SettingWorld_ChpaterList();
+                return;
+            }
             if (GameManager.instance.WdManager.NowPlayWorld.isChapter == false)
                 a_Object.TestWorld();
-            else
-                //진행중인 월드에 챕터가 있다면 월드는 보여주지않는다 이때 재개화면 나오게하기 
-                GameManager.instance.LobbyUIManger.m_ResumePanel.SetActive(true);
-            //GameManager.instance.LobbyUIManger.SettingWorld_WorldList();
+            else if (GameManager.instance.WdManager.NowPlayWorld.isChapterClear == true && GameManager.instance.WdManager.NowPlayWorld.ExitChapter == false)
+            {   //진행중인 월드에 챕터가 있다면 월드는 보여주지않는다 이때 재개화면 나오게하기
+                a_Object.RandomSetting();
+                GameManager.instance.LobbyUIManger.SettingWorld_ChpaterList();
+                //GameManager.instance.LobbyUIManger.m_ResumePanel.SetActive(true);
+            }    //GameManager.instance.LobbyUIManger.SettingWorld_WorldList();
+            
         }
-           // SceneManager.LoadScene("Lobby");
+   
+        // SceneManager.LoadScene("Lobby");
+
+
     }
 
 }

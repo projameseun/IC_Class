@@ -34,19 +34,23 @@ public class ChapterInfoBtn : MonoBehaviour
         }//if(ChapterBtn != null)
     }
 
-    void RandomSetting()
+    public void RandomSetting()
     {
-       
-        int ChapterId = PercentInfo.RandomSelcet(m_ChapterInfo.Chapter_MapList);  //랜덤챕터리스트
-                                                                                                                        //Debug.Log(ChapterId);
-        for (int j = 0; j < GameManager.instance.StManager.StageList.Count; j++)
+        GameManager.instance.ChaptManager.NowChapter.IsClear = false;
+
+        for (int i = 0; i < 10; i++)
         {
-            if (ChapterId == GameManager.instance.StManager.StageList[j].Stageid)    //랜덤챕터리스트 와 챕터리스트 아이디 비교
+            int ChapterId = PercentInfo.StageRandomSelect(m_ChapterInfo.Chapter_MapList);  //랜덤챕터리스트
+                                                                                           //Debug.Log(ChapterId);
+            for (int j = 0; j < GameManager.instance.StManager.StageList.Count; j++)
             {
-                GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[GameManager.instance.WdManager.NowPlayWorld.ChapterProgress].
-                                    Chapter_StageList.Add(GameManager.instance.StManager.StageList[j]);
-              
-            }
-        }//for (int j = 0; j < World_RandomChapterList.Count; j++)
+                if (ChapterId == GameManager.instance.StManager.StageList[j].Stageid)    //랜덤챕터리스트 와 챕터리스트 아이디 비교
+                {
+                    GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[GameManager.instance.WdManager.NowPlayWorld.ChapterProgress].
+                                        Chapter_StageList.Add(GameManager.instance.StManager.StageList[j]);
+
+                }
+            }//for (int j = 0; j < World_RandomChapterList.Count; j++)
+        }
     }
 }

@@ -37,6 +37,10 @@ public class LobbyUIManager : MonoBehaviour
                //현재진행중인챕터 저장 
                //월드에 해당되는 챕터 저장 
                // GameManager.instance.SaveManager.PlayerPrefs_ChapterListSave();
+               //ChapterInfoBtn MakedObject = new ChapterInfoBtn();
+
+               //MakedObject.RandomSetting();
+
                GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
                SceneManager.LoadScene("Ingame");
 
@@ -53,17 +57,7 @@ public class LobbyUIManager : MonoBehaviour
             });
         }
 
-        if (GameManager.instance.WdManager.NowPlayWorld.isChapterClear == true && GameManager.instance.WdManager.NowPlayWorld.ExitChapter== false)
-        {
-            WorldInfoBtn a_Object = new WorldInfoBtn();
-            GameManager.instance.LobbyUIManger.m_Dugeon.SetActive(true);
-         
-           
-                a_Object.RandomSetting();
-
-            SettingWorld_ChpaterList();
-            Debug.Log("테스트중입니다");
-        }
+        
     }
 
     private void Update()
@@ -105,6 +99,8 @@ public class LobbyUIManager : MonoBehaviour
 
     public void SettingWorld_ChpaterList()
     {
+        GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[GameManager.instance.WdManager.NowPlayWorld.ChapterProgress].
+                       Chapter_StageList.Clear();
 
         m_ChapterPanel.SetActive(true);
         //지금은 예시로 다섯개 지정해놨는데 나중에는 카운터만큼 들어가게한다 
