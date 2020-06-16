@@ -65,7 +65,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CtrollerScripts\AnimationController.cs" />
     <Compile Include="Assets\Scripts\CtrollerScripts\CameraCtrl.cs" />
-    <Compile Include="Assets\Scripts\CtrollerScripts\TouchPanel.cs" />
     <Compile Include="Assets\Scripts\InfoScripts\ChapterInfo.cs" />
     <Compile Include="Assets\Scripts\InfoScripts\PercentInfo.cs" />
     <Compile Include="Assets\Scripts\InfoScripts\StageInfo.cs" />
