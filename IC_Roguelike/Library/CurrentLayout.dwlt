@@ -28,6 +28,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of bb7e46f... 롤백
 =======
@@ -54,6 +55,9 @@ MonoBehaviour:
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 6c885dc... 롤백
+=======
+  m_MinSize: {x: 950, y: 524}
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -113,6 +117,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of bb7e46f... 롤백
 =======
@@ -139,6 +144,9 @@ MonoBehaviour:
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 6c885dc... 롤백
+=======
+  controlID: 13
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -325,6 +333,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of bb7e46f... 롤백
 =======
@@ -351,6 +360,9 @@ MonoBehaviour:
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 6c885dc... 롤백
+=======
+  controlID: 48
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -562,6 +574,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of bb7e46f... 롤백
 =======
@@ -588,6 +601,9 @@ MonoBehaviour:
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 6c885dc... 롤백
+=======
+      m_ExpandedIDs: dcfbffff
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -784,6 +800,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of bb7e46f... 롤백
 =======
@@ -810,6 +827,9 @@ MonoBehaviour:
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 6c885dc... 롤백
+=======
+    m_ExpandedIDs: 000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -844,6 +864,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of bb7e46f... 롤백
 =======
@@ -870,6 +891,9 @@ MonoBehaviour:
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 6c885dc... 롤백
+=======
+    m_ExpandedIDs: ffffffff000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

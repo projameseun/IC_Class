@@ -977,6 +977,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 6c885dc... 롤백
@@ -984,6 +985,8 @@ Transform:
 =======
 >>>>>>> parent of bb7e46f... 롤백
 =======
+=======
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 --- !u!1001 &1602620827
@@ -1016,6 +1019,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 6c885dc... 롤백
       value: 0.07
@@ -1034,6 +1038,9 @@ PrefabInstance:
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 6c885dc... 롤백
+=======
+      value: 1
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
       objectReference: {fileID: 0}
     - target: {fileID: 7133712531010859078, guid: ab4fa9459ebd72e4da6e8edb4ece435a,
         type: 3}
@@ -1102,6 +1109,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of f864058... 수정1
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
@@ -1119,6 +1127,8 @@ PrefabInstance:
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 >>>>>>> parent of 6c885dc... 롤백
+=======
+>>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 --- !u!1 &1626208346
 GameObject:
   m_ObjectHideFlags: 0
