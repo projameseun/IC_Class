@@ -53,8 +53,11 @@ public class Monster : Character
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of bb7e46f... 롤백
+=======
+>>>>>>> parent of 6c885dc... 롤백
         TracePlayer();
 <<<<<<< HEAD
 =======
@@ -63,6 +66,7 @@ public class Monster : Character
 <<<<<<< HEAD
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
@@ -71,6 +75,8 @@ public class Monster : Character
 >>>>>>> parent of bb7e46f... 롤백
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+=======
+>>>>>>> parent of 6c885dc... 롤백
     }
 
     private void OnDrawGizmosSelected()
@@ -142,6 +148,9 @@ public class Monster : Character
             }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 6c885dc... 롤백
             else
             {
                 isTrace = false;
@@ -159,9 +168,12 @@ public class Monster : Character
                 LookPlayer();
                 
             }
+<<<<<<< HEAD
 >>>>>>> parent of bb7e46f... 롤백
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+=======
+>>>>>>> parent of 6c885dc... 롤백
         }
 
         if (hitedTargetContainer.Count > 0)
