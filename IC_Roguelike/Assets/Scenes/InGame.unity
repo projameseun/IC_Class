@@ -973,6 +973,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
@@ -1082,6 +1083,8 @@ PrefabInstance:
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+=======
+>>>>>>> parent of ce68cc2... 롤백
 --- !u!1 &1626208346
 GameObject:
   m_ObjectHideFlags: 0

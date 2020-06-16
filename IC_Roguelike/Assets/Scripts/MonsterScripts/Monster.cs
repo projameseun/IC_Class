@@ -48,11 +48,11 @@ public class Monster : Character
 
     void Update()
     {
-<<<<<<< HEAD
         FindViewTargets();
 <<<<<<< HEAD
 <<<<<<< HEAD
         TracePlayer();
+<<<<<<< HEAD
 =======
         LostPlayer();
 >>>>>>> parent of f864058... 수정1
@@ -60,6 +60,8 @@ public class Monster : Character
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+=======
+>>>>>>> parent of ce68cc2... 롤백
     }
 
     private void OnDrawGizmosSelected()
@@ -80,7 +82,7 @@ public class Monster : Character
             Debug.DrawRay(originPos, lookDir * viewDistance, Color.green);
             Debug.DrawRay(originPos, horizontalRightDir * viewDistance, Color.cyan);
 
-            FindViewTargets();
+            //FindViewTargets();
         }
     }
 
@@ -104,16 +106,16 @@ public class Monster : Character
 
             if (angle <= viewHalfAngle)
             {
-                RaycastHit2D rayHitedTarget = Physics2D.Raycast(originPos, dir, viewDistance, viewObstacleMask);
-
-                if (rayHitedTarget)
+                RaycastHit2D rayHitedObstacle = Physics2D.Raycast(originPos, dir, viewDistance, viewObstacleMask);
+                RaycastHit2D rayHitedPlayer = Physics2D.Raycast(originPos, dir, viewDistance, viewTargetMask);
+                if (rayHitedObstacle)
                 {
                     LostPlayer();
 
                     if (bDebugMode)
-                        Debug.DrawLine(originPos, rayHitedTarget.point, Color.yellow);
+                        Debug.DrawLine(originPos, rayHitedObstacle.point, Color.yellow);
                 }
-                else
+                else if (rayHitedPlayer) 
                 {
                     hitedTargetContainer.Add(hitedTarget);
                     
@@ -122,11 +124,11 @@ public class Monster : Character
                     if (bDebugMode)
                         Debug.DrawLine(originPos, targetPos, Color.red);
                 }
-<<<<<<< HEAD
                 else
                 {
                     LostPlayer();
                 }
+<<<<<<< HEAD
 =======
             }
 <<<<<<< HEAD
@@ -134,6 +136,8 @@ public class Monster : Character
             {
                 isTrace = false;
 >>>>>>> parent of f864058... 수정1
+=======
+>>>>>>> parent of ce68cc2... 롤백
             }
 =======
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성

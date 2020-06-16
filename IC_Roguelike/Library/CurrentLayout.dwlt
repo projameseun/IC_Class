@@ -24,6 +24,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 548}
 =======
   m_MinSize: {x: 950, y: 300}
@@ -34,6 +35,9 @@ MonoBehaviour:
 =======
   m_MinSize: {x: 950, y: 524}
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+=======
+  m_MinSize: {x: 950, y: 548}
+>>>>>>> parent of ce68cc2... 롤백
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -89,6 +93,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 95
 =======
   controlID: 80
@@ -99,6 +104,9 @@ MonoBehaviour:
 =======
   controlID: 13
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+=======
+  controlID: 95
+>>>>>>> parent of ce68cc2... 롤백
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 198}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 48
+  controlID: 49
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -200,7 +208,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 474}
   m_MaxSize: {x: 10004, y: 14024}
   vertical: 1
-  controlID: 138
+  controlID: 114
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -281,6 +289,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 94
 =======
   controlID: 47
@@ -291,6 +300,9 @@ MonoBehaviour:
 =======
   controlID: 48
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+=======
+  controlID: 94
+>>>>>>> parent of ce68cc2... 롤백
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -498,6 +510,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ExpandedIDs: dcfbfffff4ffffff8a290000a8290000
 =======
       m_ExpandedIDs: 36fbffff46fbfffff4ffffff
@@ -508,6 +521,9 @@ MonoBehaviour:
 =======
       m_ExpandedIDs: dcfbffff
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+=======
+      m_ExpandedIDs: dcfbfffff4ffffff8a290000a8290000
+>>>>>>> parent of ce68cc2... 롤백
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -700,6 +716,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000005a2600000627000086270000ac270000ca270000ee2700000c28000048280000682800008e280000be280000e02800000e290000562a0000582a0000
 =======
     m_ExpandedIDs: 00000000c6260000f6260000fa260000142700006e2700009c270000a02700001a2800003c2800007828000094280000ce280000f8280000262900004429000070290000802a0000822a0000
@@ -710,6 +727,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+=======
+    m_ExpandedIDs: 000000005a2600000627000086270000ac270000ca270000ee2700000c28000048280000682800008e280000be280000e02800000e290000562a0000582a0000
+>>>>>>> parent of ce68cc2... 롤백
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,6 +760,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: ffffffff000000005a260000d626000086270000ac270000ca270000ee2700000c28000048280000682800008e280000be280000e02800000e290000562a0000582a0000
 =======
     m_ExpandedIDs: ffffffff00000000c6260000f6260000fa260000142700006e2700009c270000a02700001a2800003c2800007828000094280000ce280000f8280000262900004429000070290000802a0000822a0000
@@ -750,6 +771,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: ffffffff000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
 >>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+=======
+    m_ExpandedIDs: ffffffff000000005a260000d626000086270000ac270000ca270000ee2700000c28000048280000682800008e280000be280000e02800000e290000562a0000582a0000
+>>>>>>> parent of ce68cc2... 롤백
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
