@@ -32,7 +32,7 @@ public class WorldInfo
     //마지막 챕터의 id
       
     
-    public int ChapterProgress; //월드에서 지금 챕터가 어떤게 저장되잇는지
+    public int ChapterProgress; //월드에서 지금 챕터가 어떤게 저장되잇는지  진척도
     public bool ExitChapter = false;    //챕터 그냥나갔을때
     public int EndChapter;  //마지막챕터장 나중에할거 
     public bool isChapter;

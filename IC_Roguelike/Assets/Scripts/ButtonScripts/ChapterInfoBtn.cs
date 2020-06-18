@@ -18,7 +18,7 @@ public class ChapterInfoBtn : MonoBehaviour
             m_ChapterBtn.onClick.AddListener(() =>
             {
                 //스테이지 세팅 스테이지는 무조건 나오면 다시돌리기랜덤으로
-                RandomSetting();
+            
 
 
 
@@ -28,6 +28,8 @@ public class ChapterInfoBtn : MonoBehaviour
                 GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
                 int NowChapterCount = GameManager.instance.WdManager.NowPlayWorld.ChapterProgress;
                 GameManager.instance.ChaptManager.NowChapter = GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[NowChapterCount];
+
+                RandomSetting();
                 SceneManager.LoadScene("Ingame");
 
             });//  m_ChapterBtn.onClick.AddListener(() =>
@@ -47,8 +49,7 @@ public class ChapterInfoBtn : MonoBehaviour
             {
                 if (ChapterId == GameManager.instance.StManager.StageList[j].Stageid)    //랜덤챕터리스트 와 챕터리스트 아이디 비교
                 {
-                    GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[GameManager.instance.WdManager.NowPlayWorld.ChapterProgress].
-                                        Chapter_StageList.Add(GameManager.instance.StManager.StageList[j]);
+                    GameManager.instance.ChaptManager.NowChapter.Chapter_StageList.Add(GameManager.instance.StManager.StageList[j]);
 
                 }
             }//for (int j = 0; j < World_RandomChapterList.Count; j++)

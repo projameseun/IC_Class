@@ -139,13 +139,11 @@ public class PercentInfo //: MonoBehaviour
         {
            // Debug.Log("9번들어와야됩니다");
            
-            for (int i = 0; i < GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[GameManager.instance.WdManager.NowPlayWorld.ChapterProgress].
-                                        Chapter_StageList.Count; i++)
+            for (int i = 0; i < GameManager.instance.ChaptManager.NowChapter.Chapter_StageList.Count; i++)
             {
                 for (int j = 0; j < a_RandomList.Count; j++)
                 {
-                    if (GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[GameManager.instance.WdManager.NowPlayWorld.ChapterProgress].
-                                        Chapter_StageList[i].Stageid == a_RandomList[j].ID)
+                    if (GameManager.instance.ChaptManager.NowChapter.Chapter_StageList[i].Stageid == a_RandomList[j].ID)
                     {
                         a_RandomList.RemoveAt(j);
 
