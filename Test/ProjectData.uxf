@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>7</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1232</x>
-      <y>658</y>
-      <w>196</w>
-      <h>112</h>
+      <x>1408</x>
+      <y>752</y>
+      <w>224</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>GameManager
 
@@ -21,10 +21,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1519</x>
-      <y>847</y>
-      <w>210</w>
-      <h>168</h>
+      <x>1736</x>
+      <y>968</y>
+      <w>240</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>LoaderMg
 halign=left
@@ -50,10 +50,10 @@ delegate 변수에 Load함수들 등록 할 것.
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1421</x>
-      <y>700</y>
-      <w>112</w>
-      <h>189</h>
+      <x>1624</x>
+      <y>800</y>
+      <w>128</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;140.0;250.0</additional_attributes>
@@ -61,17 +61,16 @@ delegate 변수에 Load함수들 등록 할 것.
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1519</x>
-      <y>595</y>
-      <w>217</w>
-      <h>91</h>
+      <x>1736</x>
+      <y>680</y>
+      <w>248</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>PlayerInfoMG
 halign=left
 --
 #구현할 것
-#진행중인 월드가 있는가?
-#있다면 그 상태값을 표현
++ IsPlayWorld : boolean
 #완료된 챕터들 값 표시
 #기본적인 정보
 #월드에서 남은 목숨 정보</panel_attributes>
@@ -80,10 +79,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1421</x>
-      <y>623</y>
-      <w>112</w>
-      <h>70</h>
+      <x>1624</x>
+      <y>712</y>
+      <w>128</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;80.0;140.0;10.0</additional_attributes>
@@ -91,10 +90,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1498</x>
-      <y>476</y>
-      <w>203</w>
-      <h>105</h>
+      <x>1712</x>
+      <y>544</y>
+      <w>232</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>ChapterManager
 halign=left
@@ -113,10 +112,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1512</x>
-      <y>700</y>
-      <w>231</w>
-      <h>98</h>
+      <x>1728</x>
+      <y>800</y>
+      <w>264</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>WorldManger
 halign=left
@@ -137,10 +136,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1379</x>
-      <y>378</y>
-      <w>175</w>
-      <h>91</h>
+      <x>1576</x>
+      <y>432</y>
+      <w>200</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>StageManager
 halign=left
@@ -153,10 +152,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1421</x>
-      <y>686</y>
-      <w>105</w>
-      <h>56</h>
+      <x>1624</x>
+      <y>784</y>
+      <w>120</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;130.0;60.0</additional_attributes>
@@ -164,10 +163,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1204</x>
-      <y>840</y>
-      <w>210</w>
-      <h>98</h>
+      <x>1376</x>
+      <y>960</y>
+      <w>240</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>#abstract클래스
 halign=left
@@ -181,10 +180,10 @@ ICObject
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1099</x>
-      <y>980</y>
-      <w>301</w>
-      <h>231</h>
+      <x>1256</x>
+      <y>1120</y>
+      <w>344</w>
+      <h>264</h>
     </coordinates>
     <panel_attributes>#abstract
 Character
@@ -214,10 +213,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1141</x>
-      <y>931</y>
-      <w>105</w>
-      <h>63</h>
+      <x>1304</x>
+      <y>1064</y>
+      <w>120</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
     <additional_attributes>10.0;70.0;130.0;10.0</additional_attributes>
@@ -225,10 +224,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>840</x>
-      <y>1232</y>
-      <w>252</w>
-      <h>203</h>
+      <x>960</x>
+      <y>1408</y>
+      <w>240</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>PlayerCharacter
 halign=left
@@ -239,14 +238,6 @@ halign=left
 - equipWeaponId : int
 #착용중인 무기 정보값
 - equipWeapon : Weapons 
-#Animator를 불러오기 위한 변수
-- anim : Animator   
-#animationController를 불러오기 위한 변수               
-- animCtrl : AnimationController    
-#마지막 움직임방향을 확인하기 위한값
-- lastMove : Vector2
-#현재 움직이고 있는가?
-- isMove : bool
 --
 #SetWeapon에서 동작 방식,조작법 변경
 #뿐만아니라 공격력등을 여기서 배정한다
@@ -256,10 +247,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>959</x>
-      <y>1204</y>
-      <w>175</w>
-      <h>42</h>
+      <x>1096</x>
+      <y>1376</y>
+      <w>200</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
     <additional_attributes>10.0;40.0;230.0;10.0</additional_attributes>
@@ -267,10 +258,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1127</x>
-      <y>1232</y>
-      <w>252</w>
-      <h>252</h>
+      <x>1288</x>
+      <y>1408</y>
+      <w>288</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>Monster
 
@@ -280,8 +271,9 @@ halign=left
 #Id : int
 #몬스터 등급
 #rank : int
+#paze : int
 #작동리스트(행동 리스트)
-#actionList : List&lt;MonsterAction&gt;
+#action : MonsterAction
 #시야각
 +Sight : float
 #스테이지 클리어를 위한 경험치 드랍양
@@ -293,16 +285,20 @@ halign=left
 
 +weakPoint : char
 --
-</panel_attributes>
+#특정 상황에 따라 Paze변경
+#동작 시나리오에 조건이 있다.
++SetPaze() : void
+#행동이 없으면 조건에 따라 생성
++MonsterAct() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1176</x>
-      <y>1204</y>
-      <w>28</w>
-      <h>42</h>
+      <x>1344</x>
+      <y>1376</y>
+      <w>32</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
     <additional_attributes>20.0;40.0;10.0;10.0</additional_attributes>
@@ -310,10 +306,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1470</x>
-      <y>1064</y>
-      <w>196</w>
-      <h>91</h>
+      <x>1680</x>
+      <y>1216</y>
+      <w>224</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>#abstract클래스
 Obstacle
@@ -330,10 +326,10 @@ abstract Act(Character T) : void
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1407</x>
-      <y>910</y>
-      <w>84</w>
-      <h>168</h>
+      <x>1608</x>
+      <y>1040</y>
+      <w>96</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
     <additional_attributes>100.0;220.0;10.0;10.0</additional_attributes>
@@ -341,10 +337,10 @@ abstract Act(Character T) : void
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1421</x>
-      <y>1330</y>
-      <w>126</w>
-      <h>91</h>
+      <x>1624</x>
+      <y>1520</y>
+      <w>144</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>Item
 halign=left
@@ -356,10 +352,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1582</x>
-      <y>1302</y>
-      <w>147</w>
-      <h>91</h>
+      <x>1808</x>
+      <y>1488</y>
+      <w>168</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>Projectile
 halign=left
@@ -371,10 +367,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1470</x>
-      <y>1148</y>
-      <w>21</w>
-      <h>196</h>
+      <x>1680</x>
+      <y>1312</y>
+      <w>24</w>
+      <h>224</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
     <additional_attributes>10.0;260.0;10.0;10.0</additional_attributes>
@@ -382,10 +378,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1561</x>
-      <y>1148</y>
-      <w>91</w>
-      <h>168</h>
+      <x>1784</x>
+      <y>1312</y>
+      <w>104</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
     <additional_attributes>110.0;220.0;10.0;10.0</additional_attributes>
@@ -393,10 +389,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1736</x>
-      <y>1176</y>
-      <w>140</w>
-      <h>91</h>
+      <x>1984</x>
+      <y>1344</y>
+      <w>160</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>Obj (환경물)
 halign=left
@@ -408,10 +404,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1659</x>
-      <y>1120</y>
-      <w>140</w>
-      <h>70</h>
+      <x>1896</x>
+      <y>1280</y>
+      <w>160</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
     <additional_attributes>180.0;80.0;10.0;10.0</additional_attributes>
@@ -419,10 +415,10 @@ halign=left
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1638</x>
-      <y>812</y>
-      <w>182</w>
-      <h>84</h>
+      <x>1872</x>
+      <y>928</y>
+      <w>208</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Note..
 bg=white
@@ -433,10 +429,10 @@ Loader의 역활은 각 프리셋에 해당하는
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>861</x>
-      <y>812</y>
-      <w>140</w>
-      <h>91</h>
+      <x>984</x>
+      <y>928</y>
+      <w>160</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>IngameStageMG
 halign=left
@@ -452,10 +448,10 @@ halign=left
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>826</x>
-      <y>1141</y>
-      <w>140</w>
-      <h>56</h>
+      <x>944</x>
+      <y>1304</y>
+      <w>160</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Note..
 bg=white
@@ -467,10 +463,10 @@ Player의 위치는 항상
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1806</x>
-      <y>924</y>
-      <w>168</w>
-      <h>70</h>
+      <x>2064</x>
+      <y>1056</y>
+      <w>192</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>#템플릿 클래스
 Serialization
@@ -485,10 +481,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1722</x>
-      <y>889</y>
-      <w>98</w>
-      <h>98</h>
+      <x>1968</x>
+      <y>1016</y>
+      <w>112</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;120.0;120.0</additional_attributes>
@@ -496,10 +492,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1330</x>
-      <y>462</y>
-      <w>84</w>
-      <h>210</h>
+      <x>1520</x>
+      <y>528</y>
+      <w>96</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;280.0;100.0;10.0</additional_attributes>
@@ -507,10 +503,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1414</x>
-      <y>574</y>
-      <w>98</w>
-      <h>98</h>
+      <x>1616</x>
+      <y>656</y>
+      <w>112</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;120.0;120.0;10.0</additional_attributes>
@@ -518,10 +514,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>896</x>
-      <y>623</y>
-      <w>224</w>
-      <h>126</h>
+      <x>1024</x>
+      <y>712</y>
+      <w>256</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>StageInfo
 halign=left
@@ -540,10 +536,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>777</x>
-      <y>350</y>
-      <w>231</w>
-      <h>189</h>
+      <x>888</x>
+      <y>400</y>
+      <w>264</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>WorldInfo
 halign=left
@@ -570,10 +566,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1071</x>
-      <y>294</y>
-      <w>252</w>
-      <h>301</h>
+      <x>1224</x>
+      <y>336</y>
+      <w>288</w>
+      <h>344</h>
     </coordinates>
     <panel_attributes>ChapterInfo
 halign=left
@@ -605,10 +601,10 @@ halign=left
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1519</x>
-      <y>315</y>
-      <w>210</w>
-      <h>98</h>
+      <x>1736</x>
+      <y>360</y>
+      <w>240</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Note..
 bg=white
@@ -622,10 +618,10 @@ Now는 리스트의 정보를 받아온다.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1295</x>
-      <y>119</y>
-      <w>224</w>
-      <h>126</h>
+      <x>1480</x>
+      <y>136</y>
+      <w>256</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>PercentInfo
 halign=left
@@ -640,10 +636,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>707</x>
-      <y>812</y>
-      <w>140</w>
-      <h>91</h>
+      <x>808</x>
+      <y>928</y>
+      <w>160</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>CharacterState (Enum)
 halign=left
@@ -659,10 +655,10 @@ immuneKnockback
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1659</x>
-      <y>644</y>
-      <w>182</w>
-      <h>84</h>
+      <x>1896</x>
+      <y>736</y>
+      <w>208</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Note..
 bg=white
@@ -674,10 +670,10 @@ WorldInfo값은 고정,추가될수있다.
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>868</x>
+      <x>992</x>
       <y>0</y>
-      <w>399</w>
-      <h>217</h>
+      <w>456</w>
+      <h>248</h>
     </coordinates>
     <panel_attributes>Note..
 bg=red
@@ -701,10 +697,10 @@ bg=red
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>581</x>
-      <y>1225</y>
-      <w>196</w>
-      <h>105</h>
+      <x>664</x>
+      <y>1400</y>
+      <w>224</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>Weapons
 halign=left
@@ -719,10 +715,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>770</x>
-      <y>1260</y>
-      <w>84</w>
-      <h>21</h>
+      <x>880</x>
+      <y>1440</y>
+      <w>96</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
@@ -730,10 +726,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>609</x>
-      <y>917</y>
-      <w>189</w>
-      <h>140</h>
+      <x>696</x>
+      <y>1048</y>
+      <w>216</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>#abstract
 NPC
@@ -747,10 +743,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>777</x>
-      <y>882</y>
-      <w>441</w>
-      <h>49</h>
+      <x>888</x>
+      <y>1008</y>
+      <w>504</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
     <additional_attributes>10.0;50.0;610.0;10.0</additional_attributes>
@@ -758,10 +754,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>301</x>
-      <y>1085</y>
-      <w>189</w>
-      <h>140</h>
+      <x>344</x>
+      <y>1240</y>
+      <w>216</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>ShopNPC
 halign=left
@@ -774,10 +770,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>483</x>
-      <y>1036</y>
-      <w>140</w>
-      <h>63</h>
+      <x>552</x>
+      <y>1184</y>
+      <w>160</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
     <additional_attributes>10.0;70.0;180.0;10.0</additional_attributes>
@@ -785,38 +781,38 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1365</x>
-      <y>1505</y>
-      <w>126</w>
-      <h>91</h>
+      <x>1560</x>
+      <y>1736</y>
+      <w>168</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>&lt;abstract&gt;
 MonsterAction
 halign=left
 --
-+Act() : void</panel_attributes>
++Act(MonsterState state) : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1288</x>
-      <y>1589</y>
-      <w>91</w>
-      <h>91</h>
+      <x>1472</x>
+      <y>1832</y>
+      <w>104</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>10.0;110.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1225</x>
-      <y>1666</y>
-      <w>126</w>
-      <h>91</h>
+      <x>1400</x>
+      <y>1904</y>
+      <w>144</w>
+      <h>104</h>
     </coordinates>
-    <panel_attributes>이것들은 추상화 클래스로
+    <panel_attributes>orkAttack
 halign=left
 --
 +Act() : void</panel_attributes>
@@ -825,10 +821,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1729</x>
-      <y>469</y>
-      <w>259</w>
-      <h>105</h>
+      <x>1976</x>
+      <y>536</y>
+      <w>296</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>InGameManager
 halign=left
@@ -844,10 +840,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>476</x>
-      <y>476</y>
-      <w>245</w>
-      <h>182</h>
+      <x>544</x>
+      <y>544</y>
+      <w>280</w>
+      <h>208</h>
     </coordinates>
     <panel_attributes>Map
 halign=left
@@ -872,10 +868,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>175</x>
-      <y>679</y>
-      <w>231</w>
-      <h>154</h>
+      <x>200</x>
+      <y>776</y>
+      <w>264</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes>MapTile
 halign=left
@@ -887,10 +883,10 @@ halign=left
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1337</x>
-      <y>259</y>
-      <w>175</w>
-      <h>91</h>
+      <x>1528</x>
+      <y>296</y>
+      <w>200</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>difficultyList
 halign=left
@@ -901,21 +897,24 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1295</x>
-      <y>1477</y>
-      <w>140</w>
-      <h>42</h>
+      <x>1568</x>
+      <y>1616</y>
+      <w>72</w>
+      <h>136</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;180.0;40.0</additional_attributes>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;150.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>196</x>
-      <y>511</y>
-      <w>266</w>
-      <h>91</h>
+      <x>224</x>
+      <y>584</y>
+      <w>304</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>Node
 halign=left
@@ -933,9 +932,9 @@ halign=left
     <id>UMLGeneric</id>
     <coordinates>
       <x>0</x>
-      <y>546</y>
-      <w>140</w>
-      <h>91</h>
+      <y>624</y>
+      <w>160</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>TileType(enum)
 halign=left
@@ -949,10 +948,10 @@ Tile_Monsters...................................................................
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>98</x>
-      <y>630</y>
-      <w>91</w>
-      <h>91</h>
+      <x>112</x>
+      <y>720</y>
+      <w>104</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>110.0;110.0;10.0;10.0</additional_attributes>
@@ -960,10 +959,10 @@ Tile_Monsters...................................................................
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>455</x>
-      <y>581</y>
-      <w>35</w>
-      <h>21</h>
+      <x>520</x>
+      <y>664</y>
+      <w>40</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>30.0;10.0;10.0;10.0</additional_attributes>
@@ -971,10 +970,10 @@ Tile_Monsters...................................................................
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>714</x>
-      <y>616</y>
-      <w>196</w>
-      <h>70</h>
+      <x>816</x>
+      <y>704</y>
+      <w>224</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;260.0;80.0</additional_attributes>
@@ -982,10 +981,10 @@ Tile_Monsters...................................................................
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>35</x>
-      <y>399</y>
-      <w>140</w>
-      <h>91</h>
+      <x>40</x>
+      <y>456</y>
+      <w>160</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>NodeType(enum)
 halign=left
@@ -999,10 +998,10 @@ Node_Monsters...................................................................
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>168</x>
-      <y>448</y>
-      <w>42</w>
-      <h>140</h>
+      <x>192</x>
+      <y>512</y>
+      <w>48</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>40.0;180.0;10.0;10.0</additional_attributes>
@@ -1010,10 +1009,10 @@ Node_Monsters...................................................................
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>231</x>
-      <y>595</y>
-      <w>56</w>
-      <h>98</h>
+      <x>264</x>
+      <y>680</y>
+      <w>64</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;60.0;120.0</additional_attributes>
@@ -1021,29 +1020,51 @@ Node_Monsters...................................................................
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>581</x>
-      <y>1393</y>
-      <w>189</w>
-      <h>140</h>
+      <x>1576</x>
+      <y>1904</y>
+      <w>144</w>
+      <h>104</h>
     </coordinates>
-    <panel_attributes>AnimationController
+    <panel_attributes>PowerAttack
 halign=left
 --
-
---
-#플레이어 애니메이션
-+ PlayerAnimCtrl(Animator pAnim, Vector2 pLastMove, bool pIsMove) : void</panel_attributes>
++Act() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>679</x>
-      <y>1351</y>
-      <w>175</w>
-      <h>56</h>
+      <x>1600</x>
+      <y>1832</y>
+      <w>24</w>
+      <h>88</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>230.0;10.0;10.0;60.0</additional_attributes>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1744</x>
+      <y>1904</y>
+      <w>144</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>slowAttack
+halign=left
+--
++Act() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1688</x>
+      <y>1832</y>
+      <w>128</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>140.0;90.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

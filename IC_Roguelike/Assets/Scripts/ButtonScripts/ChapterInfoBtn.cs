@@ -41,6 +41,7 @@ public class ChapterInfoBtn : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             int ChapterId = PercentInfo.StageRandomSelect(m_ChapterInfo.Chapter_MapList);  //랜덤챕터리스트
+            Debug.Log("Chapter ID" + ChapterId);
                                                                                            //Debug.Log(ChapterId);
             for (int j = 0; j < GameManager.instance.StManager.StageList.Count; j++)
             {

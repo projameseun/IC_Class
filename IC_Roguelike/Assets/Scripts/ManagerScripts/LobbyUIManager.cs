@@ -62,6 +62,7 @@ public class LobbyUIManager : MonoBehaviour
 
     private void Update()
     {
+        
         PlayerHp.text = "플레이어목숨:" + PlayerCtrl.PlayerHp.ToString();
         NowChapterID.text = "현재진행중인 챕터ID:" + GameManager.instance.WdManager.NowPlayWorld.ChapterProgress.ToString();
         NowWorldID.text = "현재진행중인 월드ID:" + GameManager.instance.WdManager.SelectedWorldID.ToString();

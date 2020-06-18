@@ -28,16 +28,7 @@ public class WorldInfoBtn : MonoBehaviour
                     RandomSetting();
                     if (GameManager.instance.WdManager.NowPlayWorld.isWorldClear == false)
                         GameManager.instance.WdManager.SelectedWorldID = m_WorldInfo.Worldid;
-                    //if (GameManager.instance.WdManager.SelectedWorldID > m_WorldInfo.Worldid)
-                    //{
-                    //    if (GameManager.instance.WdManager.NowPlayWorld.isWorldClear == false) 
-                    //    GameManager.instance.WdManager.SelectedWorldID = m_WorldInfo.Worldid;
-                    //}
-                    //else
-                    //{
-                    //    if (GameManager.instance.WdManager.NowPlayWorld.isWorldClear == false)
-                    //        GameManager.instance.WdManager.SelectedWorldID = m_WorldInfo.Worldid;
-                    //}
+                  
 
                     GameManager.instance.WdManager.NowPlayWorld.isChapter = true;
                     

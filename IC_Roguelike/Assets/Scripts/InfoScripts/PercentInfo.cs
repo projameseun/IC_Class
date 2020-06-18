@@ -62,7 +62,7 @@ public class PercentInfo //: MonoBehaviour
                 }
             }
 
-
+            Debug.Log(a_RandomList.Count + "ListCount");
             int a_Count = a_RandomList.Count;
             Debug.Log(a_Count);
           
@@ -89,7 +89,7 @@ public class PercentInfo //: MonoBehaviour
 
                 //이때넣어준다
                 ResultSel = a_RandomList[i].ID;
-                Debug.Log("Result:" + ResultSel);
+                //Debug.Log("Result:" + ResultSel);
 
                 return ResultSel;
                
@@ -123,9 +123,10 @@ public class PercentInfo //: MonoBehaviour
         float CompareResult = 0.0f;
 
         float PercentBool = 0.0f;
-
+        
         if (GameManager.instance.ChaptManager.NowChapter.IsClear == false)
         {
+            //Debug.Log("한번만 들어와야됩니다");
             //Debug.Log("설마여기");
             for (int i = 0; i < a_RandomList.Count; i++)
             {
@@ -136,22 +137,27 @@ public class PercentInfo //: MonoBehaviour
         }
         else if(GameManager.instance.ChaptManager.NowChapter.IsClear == true)
         {
+           // Debug.Log("9번들어와야됩니다");
            
-            for (int i = 0; i < GameManager.instance.StManager.StageList.Count; i++)
+            for (int i = 0; i < GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[GameManager.instance.WdManager.NowPlayWorld.ChapterProgress].
+                                        Chapter_StageList.Count; i++)
             {
                 for (int j = 0; j < a_RandomList.Count; j++)
                 {
-                    if (GameManager.instance.StManager.StageList[j].Stageid == a_RandomList[j].ID)
+                    if (GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[GameManager.instance.WdManager.NowPlayWorld.ChapterProgress].
+                                        Chapter_StageList[i].Stageid == a_RandomList[j].ID)
                     {
                         a_RandomList.RemoveAt(j);
+
 
                     }
                 }
             }
 
+          //  Debug.Log(a_RandomList.Count + "ListCount");
 
             int a_Count = a_RandomList.Count;
-            Debug.Log(a_Count);
+           // Debug.Log(a_Count);
           
             for (int i = 0; i < a_Count; i++)
             {   
@@ -159,7 +165,7 @@ public class PercentInfo //: MonoBehaviour
                 PercentBool += a_RandomList[i].Percent;
             }
 
-           // Debug.Log(PercentBool + "확인");
+          //  Debug.Log(PercentBool + "확인1111");
         }
         
        
@@ -176,7 +182,7 @@ public class PercentInfo //: MonoBehaviour
 
                 //이때넣어준다
                 ResultSel = a_RandomList[i].ID;
-                Debug.Log("Result:" + ResultSel);
+                //Debug.Log("Result:" + ResultSel);
 
                 return ResultSel;
                
