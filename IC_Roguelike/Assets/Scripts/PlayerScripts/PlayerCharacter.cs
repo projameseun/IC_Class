@@ -20,6 +20,7 @@ public class PlayerCharacter : Character
     Vector3 moveHStep;
     Vector3 moveVStep;
 
+
     void Start()
     {
         anim = GetComponent<Animator>();    // 애니메이터 불러오기

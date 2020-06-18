@@ -21,43 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 11}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
->>>>>>> parent of 6c885dc... 롤백
-  m_MinSize: {x: 950, y: 548}
-=======
-  m_MinSize: {x: 950, y: 300}
->>>>>>> parent of f864058... 수정1
-<<<<<<< HEAD
-=======
   m_MinSize: {x: 950, y: 524}
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-<<<<<<< HEAD
-=======
-  m_MinSize: {x: 950, y: 524}
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
-  m_MinSize: {x: 950, y: 548}
->>>>>>> parent of ce68cc2... 롤백
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
-  m_MinSize: {x: 950, y: 524}
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
->>>>>>> parent of 6c885dc... 롤백
-=======
-  m_MinSize: {x: 950, y: 524}
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -79,8 +43,8 @@ MonoBehaviour:
     y: 472
     width: 885
     height: 475
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -107,46 +71,10 @@ MonoBehaviour:
     y: 0
     width: 885
     height: 947
-  m_MinSize: {x: 202, y: 424}
-  m_MaxSize: {x: 4002, y: 8024}
+  m_MinSize: {x: 202, y: 448}
+  m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
->>>>>>> parent of 6c885dc... 롤백
-  controlID: 95
-=======
-  controlID: 80
->>>>>>> parent of f864058... 수정1
-<<<<<<< HEAD
-=======
-  controlID: 13
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
-  controlID: 13
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-<<<<<<< HEAD
-=======
-  controlID: 95
->>>>>>> parent of ce68cc2... 롤백
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
-  controlID: 13
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
->>>>>>> parent of 6c885dc... 롤백
-=======
-  controlID: 13
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+  controlID: 159
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,8 +94,8 @@ MonoBehaviour:
     y: 485
     width: 562
     height: 462
-  m_MinSize: {x: 102, y: 124}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -197,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 198}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 49
+  controlID: 107
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +176,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 474}
   m_MaxSize: {x: 10004, y: 14024}
   vertical: 1
-  controlID: 114
+  controlID: 30
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -326,43 +254,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 474}
   m_MaxSize: {x: 18008, y: 14024}
   vertical: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
->>>>>>> parent of 6c885dc... 롤백
-  controlID: 94
-=======
-  controlID: 47
->>>>>>> parent of f864058... 수정1
-<<<<<<< HEAD
-=======
-  controlID: 48
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
-  controlID: 48
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-<<<<<<< HEAD
-=======
-  controlID: 94
->>>>>>> parent of ce68cc2... 롤백
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
-  controlID: 48
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
->>>>>>> parent of 6c885dc... 롤백
-=======
-  controlID: 48
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+  controlID: 158
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -565,45 +457,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
->>>>>>> parent of 6c885dc... 롤백
-      m_ExpandedIDs: dcfbfffff4ffffff8a290000a8290000
-=======
-      m_ExpandedIDs: 36fbffff46fbfffff4ffffff
->>>>>>> parent of f864058... 수정1
-<<<<<<< HEAD
-=======
-      m_ExpandedIDs: dcfbffff
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-<<<<<<< HEAD
-=======
-      m_ExpandedIDs: dcfbffff
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
-      m_ExpandedIDs: dcfbfffff4ffffff8a290000a8290000
->>>>>>> parent of ce68cc2... 롤백
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
-      m_ExpandedIDs: dcfbffff
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
->>>>>>> parent of 6c885dc... 롤백
-=======
-      m_ExpandedIDs: dcfbffff
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+      m_SelectedIDs: 02f9ffff
+      m_LastClickedID: -1790
+      m_ExpandedIDs: 12f9ffff122b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -659,9 +515,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.2954252, y: -0.809602, z: -0.07812511}
+    m_Target: {x: -6.6978226, y: -0.07362762, z: -0.10092445}
     speed: 2
-    m_Value: {x: -2.2954252, y: -0.809602, z: -0.07812511}
+    m_Value: {x: -6.6978226, y: -0.07362762, z: -0.10092445}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -689,19 +545,19 @@ MonoBehaviour:
       speed: 2
       m_Value: 1
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: 0, y: 0, z: 0, w: -1}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0, y: 0, z: 0, w: -1}
   m_Size:
-    m_Target: 9.138885
+    m_Target: 11.272746
     speed: 2
-    m_Value: 9.138885
+    m_Value: 11.272746
   m_Ortho:
     m_Target: 1
     speed: 2
     m_Value: 1
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.10476048, y: 0.41912553, z: -0.048756734, w: -0.90054536}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -780,7 +636,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
   m_ViewMode: 0
   m_StartGridSize: 42
   m_LastFolders:
@@ -793,43 +649,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f42b0000
     m_LastClickedID: 11252
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
->>>>>>> parent of 6c885dc... 롤백
-    m_ExpandedIDs: 000000005a2600000627000086270000ac270000ca270000ee2700000c28000048280000682800008e280000be280000e02800000e290000562a0000582a0000
-=======
-    m_ExpandedIDs: 00000000c6260000f6260000fa260000142700006e2700009c270000a02700001a2800003c2800007828000094280000ce280000f8280000262900004429000070290000802a0000822a0000
->>>>>>> parent of f864058... 수정1
-<<<<<<< HEAD
-=======
-    m_ExpandedIDs: 000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-<<<<<<< HEAD
-=======
-    m_ExpandedIDs: 000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
-    m_ExpandedIDs: 000000005a2600000627000086270000ac270000ca270000ee2700000c28000048280000682800008e280000be280000e02800000e290000562a0000582a0000
->>>>>>> parent of ce68cc2... 롤백
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
-    m_ExpandedIDs: 000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
->>>>>>> parent of 6c885dc... 롤백
-=======
-    m_ExpandedIDs: 000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+    m_ExpandedIDs: 00000000762700007c2700008227000088270000462800007028000088280000e02800000c2900001029000088290000a8290000fc290000302a00005c2a0000882a0000c82b0000ca2b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -857,43 +677,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
->>>>>>> parent of 6c885dc... 롤백
-    m_ExpandedIDs: ffffffff000000005a260000d626000086270000ac270000ca270000ee2700000c28000048280000682800008e280000be280000e02800000e290000562a0000582a0000
-=======
-    m_ExpandedIDs: ffffffff00000000c6260000f6260000fa260000142700006e2700009c270000a02700001a2800003c2800007828000094280000ce280000f8280000262900004429000070290000802a0000822a0000
->>>>>>> parent of f864058... 수정1
-<<<<<<< HEAD
-=======
-    m_ExpandedIDs: ffffffff000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
-    m_ExpandedIDs: ffffffff000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-<<<<<<< HEAD
-=======
-    m_ExpandedIDs: ffffffff000000005a260000d626000086270000ac270000ca270000ee2700000c28000048280000682800008e280000be280000e02800000e290000562a0000582a0000
->>>>>>> parent of ce68cc2... 롤백
-=======
->>>>>>> parent of bb7e46f... 롤백
-=======
-    m_ExpandedIDs: ffffffff000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
-=======
->>>>>>> parent of 6c885dc... 롤백
-=======
-    m_ExpandedIDs: ffffffff000000005826000074260000d4260000042700000827000084270000aa270000c8270000ec2700000a28000046280000662800008c280000bc280000de2800000c290000422a0000442a0000
->>>>>>> parent of 78e5c7e... 플레이어 입력UI 생성
+    m_ExpandedIDs: ffffffff00000000762700007c2700008227000088270000462800007028000088280000e02800000c2900001029000088290000a8290000302a00005c2a0000882a0000c82b0000ca2b00009a380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

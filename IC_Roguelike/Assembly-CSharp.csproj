@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CtrollerScripts\AnimationController.cs" />
     <Compile Include="Assets\Scripts\CtrollerScripts\CameraCtrl.cs" />
+    <Compile Include="Assets\Scripts\CtrollerScripts\TouchPanelController.cs" />
     <Compile Include="Assets\Scripts\InfoScripts\ChapterInfo.cs" />
     <Compile Include="Assets\Scripts\InfoScripts\PercentInfo.cs" />
     <Compile Include="Assets\Scripts\InfoScripts\StageInfo.cs" />
@@ -102,6 +103,12 @@
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>C:/Users/Sim Jae Joon/Desktop/Unity_Game/Indy_Class/IC_Class/IC_Roguelike/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/Sim Jae Joon/Desktop/Unity_Game/Indy_Class/IC_Class/IC_Roguelike/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/Sim Jae Joon/Desktop/Unity_Game/Indy_Class/IC_Class/IC_Roguelike/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.23f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
