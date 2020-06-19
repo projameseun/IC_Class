@@ -62,7 +62,7 @@ public class WorldInfoBtn : MonoBehaviour
                 //일단은테스트
              GameManager.instance.LobbyUIManger.SettingWorld_WorldList();
             
-                Debug.Log("test");
+            
             //GameManager.instance.WdManager.SelectedWorldID
 
         

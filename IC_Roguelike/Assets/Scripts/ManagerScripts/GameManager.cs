@@ -38,8 +38,12 @@ public class GameManager : MonoBehaviour
         {
             InitBtn.onClick.AddListener(() =>
             {
+                Debug.Log("Init Btn");
+                WdManager.SelectedWorldID = 0;
+                WdManager.NowPlayWorld = new WorldInfo();
                 PlayerPrefs.DeleteAll();
-                
+                SaveManager.PlayerPrefs_WorldChapterListSave();
+                LoaderManager.PlayerPrefs_ChapterListLoad();
 
             });
         }

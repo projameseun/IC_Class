@@ -17,7 +17,7 @@ public class WorldManager : MonoBehaviour
     public void SetWorldList(List<WorldInfo> LoadWorldList)
     {
         Debug.Log("SetWorldLIst");
-        WorldList = LoadWorldList;
+        //WorldList = LoadWorldList;
     }
 
     

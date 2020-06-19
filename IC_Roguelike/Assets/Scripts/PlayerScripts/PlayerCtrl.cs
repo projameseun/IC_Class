@@ -46,11 +46,12 @@ public class PlayerCtrl : MonoBehaviour
     //test rigi
     public Rigidbody2D rb;
 
-    static public int PlayerHp = 5;
+    static public int PlayerHp;
 
     private void Start()
     {
         this.gameObject.GetComponent<SpriteRenderer>().sprite = m_HeroSprite[(int)PlayerAni.Idle];
+        PlayerHp = 5;
     }
     private void Update()
     {

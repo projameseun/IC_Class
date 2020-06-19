@@ -128,7 +128,7 @@ public class LoaderManager : MonoBehaviour
 
 
     #region PlayerPrefsLoad
-    void PlayerPrefs_ChapterListLoad()
+    public void PlayerPrefs_ChapterListLoad()
     {
 
         if (PlayerPrefs.HasKey("WorldID"))
@@ -182,6 +182,8 @@ public class LoaderManager : MonoBehaviour
             else
                 GameManager.instance.WdManager.NowPlayWorld.isChapterClear = false;
 
+            //PlayerHP
+            PlayerCtrl.PlayerHp = PlayerPrefs.GetInt("PlayerHP");
 
 
             GameManager.instance.WdManager.NowPlayWorld.Worldid = PlayerPrefs.GetInt("WorldID");

@@ -3137,7 +3137,7 @@ MonoBehaviour:
   GiveUpBtn: {fileID: 1261371136}
   NowWorldID: {fileID: 742359765}
   NowChapterID: {fileID: 449697788}
-  PlayerHp: {fileID: 1965266891}
+  PlayerHp: {fileID: 799046781}
 --- !u!4 &1288400019
 Transform:
   m_ObjectHideFlags: 0

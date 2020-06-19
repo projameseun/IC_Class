@@ -10,10 +10,12 @@ public class TestInfo : MonoBehaviour
     public Text SelectWorldTxt;
     public Text NowStateTxt;
     public Text NowStageIDTxt;
+    public Text PlayerHpTxt;
     public Button ExitBtn;
     public Button ClearBtn;
+    public Button HpMinusBtn;
     public int StageCount;
-    public WorldInfoBtn m_WorldBtn = new WorldInfoBtn();
+    //public WorldInfoBtn m_WorldBtn = new WorldInfoBtn();
 
     private void Start()
     {
@@ -51,19 +53,45 @@ public class TestInfo : MonoBehaviour
 
             });
         }
+
+        if (HpMinusBtn != null)
+        {
+
+            HpMinusBtn.onClick.AddListener(() =>
+            {
+                PlayerCtrl.PlayerHp -= 1;
+              
+                GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
+
+            
+            
+            });
+        }
     }
 
     private void Update()
     {
+        if (PlayerCtrl.PlayerHp <= 0)
+        {
+            GameManager.instance.WdManager.SelectedWorldID = 0;
+            GameManager.instance.WdManager.NowPlayWorld = new WorldInfo();
+            PlayerPrefs.DeleteAll();
+            Debug.Log("플레이어가 사망하였습니다");
+            GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
+          GameManager.instance.LoaderManager.PlayerPrefs_ChapterListLoad();
+            SceneManager.LoadScene("Lobby");
+        }
 
+        PlayerHpTxt.text = "플레이어남은목숨:" + PlayerCtrl.PlayerHp.ToString();
         NowChapterTxt.text = "현재진행중인 챕터ID:" + GameManager.instance.WdManager.NowPlayWorld.ChapterProgress.ToString();
         NowWorldTxt.text = "현재진행중인 월드ID:" + GameManager.instance.WdManager.SelectedWorldID.ToString();
         SelectWorldTxt.text = "내가선택한 월드ID:" + GameManager.instance.WdManager.SelectedWorldID.ToString();
         NowStateTxt.text = "현재스테이지:" + (StageCount + 1).ToString();
         if(StageCount <= 9)
-        NowStageIDTxt.text = "현재스테이지ID:" + GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[GameManager.instance.WdManager.NowPlayWorld.ChapterProgress].
+        NowStageIDTxt.text = "현재스테이지ID:" +GameManager.instance.ChaptManager.NowChapter.
                            Chapter_StageList[StageCount].Stageid.ToString();
 
+  
     }
 
     void StageClear()
