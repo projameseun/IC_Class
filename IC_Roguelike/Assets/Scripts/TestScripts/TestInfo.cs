@@ -14,12 +14,12 @@ public class TestInfo : MonoBehaviour
     public Button ExitBtn;
     public Button ClearBtn;
     public Button HpMinusBtn;
-    public int StageCount;
+    public static int StageCount;
     //public WorldInfoBtn m_WorldBtn = new WorldInfoBtn();
 
     private void Start()
     {
-        StageCount = 0;
+        //StageCount = 0;
         if (ExitBtn != null)
         {
           
@@ -43,6 +43,8 @@ public class TestInfo : MonoBehaviour
                 //1.챕터변경 
 
                 StageCount++;
+               
+                SceneManager.LoadScene("InGame");
                 if (StageCount ==10 )
                 {
                     StageClear();
@@ -96,6 +98,7 @@ public class TestInfo : MonoBehaviour
 
     void StageClear()
     {
+        StageCount = 0;
         GameManager.instance.WdManager.NowPlayWorld.ChapterProgress++;
         int NowChapterProgress = GameManager.instance.WdManager.NowPlayWorld.ChapterProgress;
         GameManager.instance.WdManager.NowPlayWorld.ExitChapter = false;
