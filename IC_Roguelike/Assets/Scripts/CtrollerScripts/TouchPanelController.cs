@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 
 public class TouchPanelController : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
+    [Range(0,1.0f)]
+    [SerializeField ]private float limitMovement = 0.5f;
+
     public GameObject playerObject;
     Vector2 touchPos;
 
@@ -13,7 +16,7 @@ public class TouchPanelController : MonoBehaviour, IDragHandler, IPointerDownHan
         Vector2 worldPoint = Input.mousePosition;
         worldPoint = Camera.main.ScreenToWorldPoint(worldPoint);
 
-        Vector2 diffPos = worldPoint - touchPos;
+        Vector2 diffPos = (worldPoint - touchPos) * limitMovement;
 
         touchPos = Input.mousePosition;
         touchPos = Camera.main.ScreenToWorldPoint(touchPos);
