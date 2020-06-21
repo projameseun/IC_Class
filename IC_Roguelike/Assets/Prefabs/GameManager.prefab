@@ -1,5 +1,48 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2038266894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038266895}
+  - component: {fileID: 3405995954905656610}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2038266895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038266894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3934455112650503166}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3405995954905656610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038266894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a854aae50ec2f942bf468dab8c3d0aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3786833625784686526
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,8 +130,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5bf13c95c8cd34386a80c8c92b34b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NowChapter: {fileID: 0}
+  NowChapter:
+    Chapterid: 0
+    ChapterName: 
+    Chapter_StageList: []
+    Chapter_MapList: []
+    Chapter_MonsterList: []
+    Chapter_ObjectList: []
+    maxObjAmount: 0
+    diffcultyMode: 
+    IsClear: 0
   ChapterList: []
+  m_ChapterPanel: {fileID: 7788729532708836477, guid: 9e2db06570bb5d341b4374fc9e2f3304,
+    type: 3}
+  m_ChpaterBtn: {fileID: 8077772212318585968, guid: 2a06a006db9d65d48969f387f5e229f5,
+    type: 3}
+  m_ChapterScroll: {fileID: 2146463364735001993, guid: c73411a6a6544314ba392d7ad28dc2cb,
+    type: 3}
 --- !u!1 &3934455112322067671
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +223,7 @@ Transform:
   - {fileID: 3934455111539476135}
   - {fileID: 3934455112962199185}
   - {fileID: 5704774737843827646}
+  - {fileID: 2038266895}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -184,6 +243,8 @@ MonoBehaviour:
   ChaptManager: {fileID: 3934455111539476134}
   StManager: {fileID: 3934455112962199184}
   PlayManager: {fileID: 3122968142044427290}
+  LoaderManager: {fileID: 3934455112322067669}
+  SaveManager: {fileID: 3405995954905656610}
 --- !u!1 &3934455112962199186
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,3 +334,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WorldList: []
   SelectedWorldID: 0
+  NowPlayWorld:
+    Worldid: 0
+    WorldName: 
+    Wolrd_RandomChapter: 
+    World_ChapterList: []
+    World_RandomChapterList: []
+    EndChater: 0
+    WorldProgress: 0
+    isChapter: 0
