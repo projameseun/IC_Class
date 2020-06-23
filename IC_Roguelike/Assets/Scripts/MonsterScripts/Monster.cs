@@ -117,7 +117,8 @@ public class Monster : Character
                 }
                 else
                 {
-                    LostPlayer();
+                    isTrace = false;
+                    //LostPlayer();
                     //Debug.Log(isTrace);
                 }
             }
