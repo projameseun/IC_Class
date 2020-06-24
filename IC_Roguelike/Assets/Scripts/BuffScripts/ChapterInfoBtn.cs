@@ -50,6 +50,7 @@ public class ChapterInfoBtn : MonoBehaviour
                 if (ChapterId == GameManager.instance.StManager.StageList[j].Stageid)    //랜덤챕터리스트 와 챕터리스트 아이디 비교
                 {
                     GameManager.instance.ChaptManager.NowChapter.Chapter_StageList.Add(GameManager.instance.StManager.StageList[j]);
+                    
 
                 }
             }//for (int j = 0; j < World_RandomChapterList.Count; j++)
