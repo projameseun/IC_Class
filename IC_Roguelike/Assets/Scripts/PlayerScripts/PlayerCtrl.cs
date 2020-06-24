@@ -51,7 +51,7 @@ public class PlayerCtrl : MonoBehaviour
     private void Start()
     {
         this.gameObject.GetComponent<SpriteRenderer>().sprite = m_HeroSprite[(int)PlayerAni.Idle];
-        PlayerHp = 5;
+        //PlayerHp = 5;
     }
     private void Update()
     {

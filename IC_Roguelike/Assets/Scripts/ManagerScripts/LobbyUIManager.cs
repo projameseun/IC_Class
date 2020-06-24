@@ -42,7 +42,7 @@ public class LobbyUIManager : MonoBehaviour
                //MakedObject.RandomSetting();
 
                GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
-               SceneManager.LoadScene("LogGame");
+               SceneManager.LoadScene("InGame");
 
            });
         }

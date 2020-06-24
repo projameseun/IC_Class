@@ -30,7 +30,7 @@ public class ChapterInfoBtn : MonoBehaviour
                 GameManager.instance.ChaptManager.NowChapter = GameManager.instance.WdManager.NowPlayWorld.World_ChapterList[NowChapterCount];
 
                 RandomSetting();
-                SceneManager.LoadScene("LogGame");
+                SceneManager.LoadScene("InGame");
 
             });//  m_ChapterBtn.onClick.AddListener(() =>
         }//if(ChapterBtn != null)

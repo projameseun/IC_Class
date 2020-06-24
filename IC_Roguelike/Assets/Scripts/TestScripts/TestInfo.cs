@@ -44,7 +44,7 @@ public class TestInfo : MonoBehaviour
 
                 StageCount++;
                
-                SceneManager.LoadScene("LogGame");
+                SceneManager.LoadScene("InGame");
                 if (StageCount ==10 )
                 {
                     StageClear();
@@ -79,6 +79,7 @@ public class TestInfo : MonoBehaviour
             GameManager.instance.WdManager.NowPlayWorld = new WorldInfo();
             PlayerPrefs.DeleteAll();
             Debug.Log("플레이어가 사망하였습니다");
+            PlayerCtrl.PlayerHp = 5;
             GameManager.instance.SaveManager.PlayerPrefs_WorldChapterListSave();
           GameManager.instance.LoaderManager.PlayerPrefs_ChapterListLoad();
             SceneManager.LoadScene("Lobby");
