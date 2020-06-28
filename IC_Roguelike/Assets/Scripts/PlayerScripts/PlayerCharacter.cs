@@ -11,6 +11,7 @@ public class PlayerCharacter : Character
 
     private Animator anim;                  // Animator를 불러오기 위한 변수
     private AnimationController animCtrl;   // AnimationController를 불러오기 위한 변수
+    private TouchPanelController touchPanelCtrl;
 
     private Vector2 lastMove;       // 마지막 움직임이 어느 방향이었는지 확인하기 위한 변수
     private bool isMove;    // 플레이어가 움직이는지 확인
@@ -25,7 +26,7 @@ public class PlayerCharacter : Character
     {
         anim = GetComponent<Animator>();    // 애니메이터 불러오기
         animCtrl = GetComponent<AnimationController>(); // 애니메이션컨트롤 불러오기
-
+        touchPanelCtrl = FindObjectOfType<TouchPanelController>();
         // 이동속도
         this.spd = 2f;
     }
@@ -36,6 +37,8 @@ public class PlayerCharacter : Character
         Move();
         // 플레이어 이동 애니메이션
         animCtrl.PlayerAnimCtrl(anim, lastMove, isMove);
+
+        touchPanelCtrl.SetAnimCtrl(anim, lastMove, isMove);
     }
 
     void Move()
@@ -63,6 +66,8 @@ public class PlayerCharacter : Character
             }
         }
     }
+
+
 
     // #SetWeapon에서 동작 방식,조작법 변경
     // #뿐만아니라 공격력등을 여기서 배정한다
