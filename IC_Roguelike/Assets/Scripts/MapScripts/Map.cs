@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class Map : MonoBehaviour
 {
-    private int MapID;   //맵 ID
-    private int height;  //노드길이
-    private int width;
+
+    [SerializeField]  private int MapID;   //맵 ID
+    [SerializeField] private int height;  //노드길이
+    [SerializeField] private int width;
 
 
     //노드정보를 담은 2차원배열
-    public Node[,] NodeArray = null;
+    public Node[,] NodeArray = new Node[9,9];
 
     //노드의 타일의 랜덤이미지 스프라이트
     private Sprite[] RandomSprite;
@@ -30,6 +31,7 @@ public class Map : MonoBehaviour
         {
             for(int j=0; j<3; j++)
             {
+               
                 Debug.Log("test");
                 //NodeArray[0].
                 MapNode = Resources.Load("Prefabs/MapNode") as GameObject;
