@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
 public class Map : MonoBehaviour
 {
     private int MapID;   //맵 ID
@@ -9,27 +11,42 @@ public class Map : MonoBehaviour
 
 
     //노드정보를 담은 2차원배열
-    private Node[,] NodeArray = null;
+    public Node[,] NodeArray = null;
 
     //노드의 타일의 랜덤이미지 스프라이트
     private Sprite[] RandomSprite;
 
-    public GameObject MapNode;
+    private GameObject MapNode;
     public GameObject MapManager = null;
 
     //해당스테이지 데이터를 넣는 변수(클래스)
     StageInfo MapStage = null;
 
+    int posX = 0;
+    int posY = 0;
     private void Start()
     {
         for(int i=0; i<3; i++)
         {
             for(int j=0; j<3; j++)
             {
+                Debug.Log("test");
+                //NodeArray[0].
                 MapNode = Resources.Load("Prefabs/MapNode") as GameObject;
                 GameObject a_Node = (GameObject)Instantiate(MapNode);
                 a_Node.transform.SetParent(MapManager.transform, false);
-                            }
+                if (i == 1)
+                    posY = 3;
+                if (i == 2)
+                    posY = 6;
+                a_Node.transform.position = new Vector3(posX, posY, 0);
+
+                posX += 3;
+                if (j == 2)
+                    posX = 0;
+
+                //Debug.Log(a_Node.transform.position);
+            }
         }
     }
 
