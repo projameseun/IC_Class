@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum TileType
+ enum TileType
 {
     Tile_Node,
+    Tile_Wall,
     Tile_Normal,
     Tile_Object,
     Tile_Monsters,

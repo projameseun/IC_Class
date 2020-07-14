@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MapID: 1
-  height: 0
-  width: 0
+  height: 5
+  width: 4
   MapManager: {fileID: 1125809986562902707}

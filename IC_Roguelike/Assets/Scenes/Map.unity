@@ -259,17 +259,22 @@ PrefabInstance:
     - target: {fileID: 1125809986562902706, guid: 976b601007970b341a2c9ac329049020,
         type: 3}
       propertyPath: height
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1125809986562902706, guid: 976b601007970b341a2c9ac329049020,
         type: 3}
       propertyPath: width
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1125809986562902707, guid: 976b601007970b341a2c9ac329049020,
         type: 3}
       propertyPath: m_Name
       value: MapOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125809986562902707, guid: 976b601007970b341a2c9ac329049020,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 976b601007970b341a2c9ac329049020, type: 3}

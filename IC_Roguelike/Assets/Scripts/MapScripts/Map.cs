@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class Map : MonoBehaviour
 
 
     //노드정보를 담은 2차원배열
-    public Node[,] NodeArray = new Node[9,9];
+    public Node[,] NodeArray = null;
 
     //노드의 타일의 랜덤이미지 스프라이트
     private Sprite[] RandomSprite;
@@ -27,23 +28,35 @@ public class Map : MonoBehaviour
     int posY = 0;
     private void Start()
     {
-        for(int i=0; i<height; i++)
+        NodeArray = new Node[width, height];
+        //Debug.Log("1" + NodeArray.GetLength(0));
+        //Debug.Log("2" + NodeArray.GetLength(1));
+
+        SetNodeRandomType();
+    }
+
+    //노드의 스프라이트를 랜덤으로 세팅하는작업 
+    public void SetNodeRandomSprite()
+    {
+        
+    }
+    //노드들의 타입을 랜덤으로 세팅하는 작업
+    public void SetNodeRandomType()
+    {
+        //여기서 wall생성
+        for (int i = 0; i < NodeArray.GetLength(1); i++)
         {
-            for(int j=0; j<width; j++)
+            for (int j = 0; j < NodeArray.GetLength(0); j++)
             {
-               
-                Debug.Log("test");
+
+                //Debug.Log("test");
                 //NodeArray[0].
                 MapNode = Resources.Load("Prefabs/MapNode") as GameObject;
                 GameObject a_Node = (GameObject)Instantiate(MapNode);
                 a_Node.transform.SetParent(MapManager.transform, false);
-                //if (i == 1)
-                //    posY = 3;
-                //if (i == 2)
-                //    posY = 6;
-              
                 a_Node.transform.position = new Vector3(posX, posY, 0);
                 
+
                 posX += 3;
                 if (j == width - 1)
                 {
@@ -53,17 +66,6 @@ public class Map : MonoBehaviour
                 //Debug.Log(a_Node.transform.position);
             }
         }
-    }
-
-    //노드의 스프라이트를 랜덤으로 세팅하는작업 
-    public void SetNodeRandomSprite()
-    {
-
-    }
-    //노드들의 타입을 랜덤으로 세팅하는 작업
-    public void SetNodeRandomType()
-    {
-
     }
 
     
