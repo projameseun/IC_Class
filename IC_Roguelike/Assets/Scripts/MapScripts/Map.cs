@@ -6,7 +6,7 @@ using UnityEngine;
 public class Map : MonoBehaviour
 {
 
-    [SerializeField]  private int MapID;   //맵 ID
+    [SerializeField] private int MapID;   //맵 ID
     [SerializeField] private int height;  //노드길이
     [SerializeField] private int width;
 
@@ -27,9 +27,9 @@ public class Map : MonoBehaviour
     int posY = 0;
     private void Start()
     {
-        for(int i=0; i<3; i++)
+        for(int i=0; i<height; i++)
         {
-            for(int j=0; j<3; j++)
+            for(int j=0; j<width; j++)
             {
                
                 Debug.Log("test");
@@ -37,16 +37,19 @@ public class Map : MonoBehaviour
                 MapNode = Resources.Load("Prefabs/MapNode") as GameObject;
                 GameObject a_Node = (GameObject)Instantiate(MapNode);
                 a_Node.transform.SetParent(MapManager.transform, false);
-                if (i == 1)
-                    posY = 3;
-                if (i == 2)
-                    posY = 6;
+                //if (i == 1)
+                //    posY = 3;
+                //if (i == 2)
+                //    posY = 6;
+              
                 a_Node.transform.position = new Vector3(posX, posY, 0);
-
+                
                 posX += 3;
-                if (j == 2)
+                if (j == width - 1)
+                {
                     posX = 0;
-
+                    posY -= 3;
+                }
                 //Debug.Log(a_Node.transform.position);
             }
         }
