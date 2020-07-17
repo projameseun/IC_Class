@@ -21,6 +21,8 @@ public class PlayerCharacter : Character
     Vector3 moveHStep;
     Vector3 moveVStep;
 
+    [HideInInspector] public float atkDelay;
+    public float atkCoolTime = 1f;               // 공격 쿨타임
 
     void Start()
     {
@@ -36,9 +38,9 @@ public class PlayerCharacter : Character
         // 플레이어 이동
         Move();
         // 플레이어 이동 애니메이션
-        animCtrl.PlayerAnimCtrl(anim, lastMove, isMove);
+        //animCtrl.PlayerAnimCtrl(anim, lastMove, isMove);
 
-        touchPanelCtrl.SetAnimCtrl(anim, lastMove, isMove);
+        //touchPanelCtrl.SetAnimCtrl(anim, lastMove, isMove);
     }
 
     void Move()

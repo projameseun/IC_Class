@@ -99,6 +99,10 @@
     <Compile Include="Assets\Scripts\ObjectScripts\Item.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\Obj.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerAction\PlayerAttackState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerAction\PlayerIdleState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerAction\PlayerMoveState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerAction\PlayerReadyState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCharacter.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\TestScripts\TestInfo.cs" />
